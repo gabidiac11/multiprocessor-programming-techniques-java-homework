@@ -33,12 +33,12 @@ public class Pot implements IPot {
 
         if(remainingPortions == 0) { v.Savage_Waits_Refilling_After_A_Sent_Request_To_Refill(); }
 
-        //thread waits thre refill
+        //this is where the thread that requested refill waits. Obs. will get served first after refill
         while(remainingPortions == 0) {
             waitAux();
         }
 
-        //thread consumes an unit
+        //thread consumes a unit
         remainingPortions --;
         v.Pot_A_Ration_Taken_By(remainingPortions);
     }
