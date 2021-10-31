@@ -1,15 +1,29 @@
 import A.ExerciseProviderA;
+import B.ExerciseProviderB;
 import Core.IExerciseFactory;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main {
 
-    public static void main(String[] argv) {
+    public static void main(String[] argv) throws IOException {
         new Launcher(ChooseExercise())
                 .Execute();
     }
 
-    private static IExerciseFactory ChooseExercise() {
-        //TODO: a prompted with that let you choose if you want 3_a or 3_b
+    private static IExerciseFactory ChooseExercise() throws IOException {
+
+        String text = Files.readString(Paths.get("src/main/java/config.txt"));
+
+        //3_b
+        if(text.equals("b")) {
+            return new ExerciseProviderB(7, 5);
+        }
+
+        //3_a
         return new ExerciseProviderA(7);
     }
 }

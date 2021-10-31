@@ -1,6 +1,6 @@
 package A;
 
-import A.Business.Cook;
+import Common.Cook;
 import A.Business.Pot;
 import A.Business.Savage;
 import Core.ICook;
@@ -11,7 +11,7 @@ import Core.ISavage;
 import java.util.Vector;
 
 public class ExerciseProviderA implements IExerciseFactory {
-    private int N;
+    private final int N;
 
     public ExerciseProviderA(int N) {
         this.N = N;
@@ -25,7 +25,7 @@ public class ExerciseProviderA implements IExerciseFactory {
     @Override
     public Vector<ISavage> CreateSavages(IPot pot) {
         return new Vector<ISavage>(){{
-            for(int i =0; i < N*5; i++) {
+            for(int i =0; i < N*10; i++) {
                 add(new Savage((Pot) pot));
             }
         }};
@@ -33,7 +33,7 @@ public class ExerciseProviderA implements IExerciseFactory {
 
     @Override
     public ICook CreateCook(IPot pot) {
-        return new Cook((Pot) pot);
+        return new Cook(pot);
     }
 
     @Override

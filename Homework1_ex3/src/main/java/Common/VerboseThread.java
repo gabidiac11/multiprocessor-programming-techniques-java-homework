@@ -49,4 +49,12 @@ public class VerboseThread {
     public void Pot_A_Ration_Taken_By(int remainingPortions) {
         System.out.printf("%s has taken a ration from the pot, which is now left with only %d \n", getName(), remainingPortions);
     }
+
+    public void Savage_Is_Stuck_While_Is_Not_His_Turn() {
+        System.out.printf("%s is stuck while is NOT his turn\n", getName());
+    }
+
+    public void Savage_Realizes_Is_His_Turn() {
+        System.out.printf("%s realizes is his turn so try to enter critical section\n", getName());
+    }
 }

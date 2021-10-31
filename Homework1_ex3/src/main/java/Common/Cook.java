@@ -1,14 +1,15 @@
-package A.Business;
+package Common;
 
 import Common.VerboseThread;
 import Core.ICook;
+import Core.IPot;
 import Core.IThreadEntity;
 
 public class Cook extends Thread implements ICook, IThreadEntity {
-    private final Pot pot;
+    private final IPot pot;
     private final VerboseThread v;
 
-    public Cook(Pot pot) {
+    public Cook(IPot pot) {
         this.pot = pot;
         v = new VerboseThread(this);
     }
