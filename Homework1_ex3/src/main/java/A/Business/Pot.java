@@ -13,57 +13,62 @@ public class Pot implements IPot {
     }
 
     @Override
-    public void GiveOneRation(VerboseThread v) {
-        synchronized (this) {
+    public synchronized void GiveOneRation(VerboseThread v) {
         if(refillRequested) {  v.Detected_Request_In_Progress_For_The_Cook_To_Refill(); }
 
-        /*
-        * suspend any other thread while the cook is refilling or about to refill
-        * this ensures one single thread will send request to the cook in case of an empty pot
-        * */
-        while (refillRequested) {}
-
-        /*
-        * if no rations are left, the current thread will notify the cook and wait for refill
-        * */
-        if(remainingPortions == 0) {
-            synchronized (this) {
-                if(!refillRequested) {
-                    refillRequested = true;
-                    notify();
-                    v.Savage_Requested_Refill();
-                }
-            }
+        /* suspend any other thread while the cook is refilling or about to refill */
+        while (refillRequested) {
+            waitAux();
         }
 
+        /* if no rations are left, the current thread will notify the cook and wait for refill  */
+        if(remainingPortions == 0) {
+                if(!refillRequested) {
+                    refillRequested = true;
+                    //intended to reach the cook
+                    notifyAll();
+                    v.Savage_Requested_Refill();
+                }
+        }
 
-            if(remainingPortions == 0) {
-                v.Savage_Waits_Refilling_After_A_Sent_Request_To_Refill();
-                notifyAll();
-            }
+        if(remainingPortions == 0) { v.Savage_Waits_Refilling_After_A_Sent_Request_To_Refill(); }
 
-            while(remainingPortions == 0) {}
+        //thread waits thre refill
+        while(remainingPortions == 0) {
+            waitAux();
+        }
 
-            remainingPortions --;
+        //thread consumes an unit
+        remainingPortions --;
+        v.Pot_A_Ration_Taken_By(remainingPortions);
+    }
 
-            v.Pot_A_Ration_Taken_By(remainingPortions);
+    private void waitAux() {
+        try {
+            wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public synchronized void theCookKeepingAnOpenMind(VerboseThread v) {
         //wait for any thread to tell the cook to refill
-        try {
-            v.CookWaits();
-            wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        while (!refillRequested) {
+            try {
+                v.CookWaits();
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+
         v.CookStopWaiting();
 
         if(refillRequested) {
             Refill(v);
             refillRequested = false;
+            notifyAll();
         }
     }
 

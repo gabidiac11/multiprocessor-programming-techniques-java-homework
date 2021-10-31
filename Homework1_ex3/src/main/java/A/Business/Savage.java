@@ -39,6 +39,8 @@ public class Savage extends Thread implements ISavage, IThreadEntity {
         }
 
         v.PrintEnd();
+
+
     }
 
     public String getTheName() {

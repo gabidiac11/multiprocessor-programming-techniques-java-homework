@@ -25,7 +25,7 @@ public class ExerciseProviderA implements IExerciseFactory {
     @Override
     public Vector<ISavage> CreateSavages(IPot pot) {
         return new Vector<ISavage>(){{
-            for(int i =0; i < N*10; i++) {
+            for(int i =0; i < N*5; i++) {
                 add(new Savage((Pot) pot));
             }
         }};

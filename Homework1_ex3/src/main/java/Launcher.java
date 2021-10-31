@@ -18,5 +18,16 @@ public class Launcher {
     public void Execute() {
         cook.start();
         savages.forEach(ISavage::start);
+
+        do {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        } while (savages.stream().allMatch(s -> ((Thread)s).isAlive()));
+
+        System.out.print("\nCook is stopping because no savage is hungry anymore...\n");
+        ((Thread) cook).stop();
     }
 }

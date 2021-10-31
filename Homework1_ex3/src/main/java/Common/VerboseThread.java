@@ -27,7 +27,7 @@ public class VerboseThread {
     }
 
     public void CookStopWaiting() {
-        System.out.printf("%s stopped waiting notification...\n", getName());
+        System.out.printf("%s stopped waiting...\n", getName());
     }
 
     public void CookRefilled() {
@@ -35,7 +35,7 @@ public class VerboseThread {
     }
 
     public void Detected_Request_In_Progress_For_The_Cook_To_Refill() {
-        System.out.printf("%s waiting while is detecting a request in progress for the cook to refill...\n", getName());
+        System.out.printf("%s started waiting because is detecting request in progress for the cook to refill...\n", getName());
     }
 
     public void Savage_Requested_Refill() {
