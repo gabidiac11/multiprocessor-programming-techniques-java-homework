@@ -6,5 +6,5 @@ public interface IExerciseFactory {
     IPot CreatePot();
     Vector<ISavage> CreateSavages(IPot pot);
     ICook CreateCook(IPot pot);
-    int GetN();
+    void AddTimeLimitIfAny(Vector<ISavage> savages);
 }

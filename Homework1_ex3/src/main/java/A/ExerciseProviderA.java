@@ -37,7 +37,7 @@ public class ExerciseProviderA implements IExerciseFactory {
     }
 
     @Override
-    public int GetN() {
-        return N;
+    public void AddTimeLimitIfAny(Vector<ISavage> savages) {
+        //NO TIME LIMIT -> WAIT FOR SAVAGE THREADS TO FINISH NATURALLY
     }
 }

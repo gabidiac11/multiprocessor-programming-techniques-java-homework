@@ -2,6 +2,8 @@ package Common;
 
 import Core.IThreadEntity;
 
+import java.util.Arrays;
+
 public class VerboseThread {
     private final IThreadEntity thread;
 
@@ -50,11 +52,29 @@ public class VerboseThread {
         System.out.printf("%s has taken a ration from the pot, which is now left with only %d \n", getName(), remainingPortions);
     }
 
-    public void Savage_Is_Stuck_While_Is_Not_His_Turn() {
-        System.out.printf("%s is stuck while is NOT his turn\n", getName());
+    public void Savage_Is_Stuck_While_Is_Not_His_Turn(boolean[] flag, int[] label) {
+        System.out.printf("%s is stuck while is NOT his turn, %s | %s \n", getName(), Arrays.toString(flag), printLabel(label));
     }
 
-    public void Savage_Realizes_Is_His_Turn() {
-        System.out.printf("%s realizes is his turn so try to enter critical section\n", getName());
+    public void Savage_Realizes_Is_His_Turn(boolean[] flag, int[] label) {
+        System.out.printf("%s realizes is his turn so try to enter critical section, %s | %s \n", getName(), Arrays.toString(flag), printLabel(label));
+    }
+
+    private String printLabel(int[] label) { return ArrayPrintWithFocus(label, thread.getIndex()); }
+
+    public String ArrayPrintWithFocus(int[] arr, int i) {
+        StringBuilder result = new StringBuilder();
+        for (int j = 0; j < arr.length; j++) {
+            if(result.length() > 0) {
+                result.append(", ");
+            }
+
+            if(i == j) {
+                result.append("*");
+            }
+            result.append(arr[j]);
+        }
+
+        return String.format("[%s]", result);
     }
 }

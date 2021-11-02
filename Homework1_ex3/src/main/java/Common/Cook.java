@@ -21,8 +21,6 @@ public class Cook extends Thread implements ICook, IThreadEntity {
         while(true) {
             pot.theCookKeepingAnOpenMind(v);
         }
-
-//        verb.PrintEnd();
     }
 
     @Override

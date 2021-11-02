@@ -56,33 +56,33 @@ public class Pot implements IPot {
     }
 
     private void lock(VerboseThread v, int i) {
-        int max = label[0];
-        for(int j = 1; j < label.length; j++) {
+        int max = 0;
+        for(int j = 0; j < label.length; j++) {
             if(max < label[j]) { max = label[j]; }
         }
 
         flag[i] = true;
         label[i] = max + 1;
 
-        if(!isThreadTurn(i)) { v.Savage_Is_Stuck_While_Is_Not_His_Turn(); }
+        if(!isThreadTurn(i)) { v.Savage_Is_Stuck_While_Is_Not_His_Turn(flag, label); }
         while(!isThreadTurn(i)) {}
 
-        v.Savage_Realizes_Is_His_Turn();
+        v.Savage_Realizes_Is_His_Turn(flag, label);
     }
 
     private boolean isThreadTurn(int i) {
         boolean isMyTurnAssumption = true;
         for(int j = 0; j < flag.length; j++) {
-            if(i == j || !flag[i]) {
+            if(i == j || !flag[j]) {
                 continue;
             }
 
-            if(label[j] > label[i]) {
+            if(label[j] < label[i]) {
                 isMyTurnAssumption = false;
                 break;
             }
 
-            if(label[j] == label[i] && j > i) {
+            if(label[j] == label[i] && j < i) {
                 isMyTurnAssumption = false;
                 break;
             }

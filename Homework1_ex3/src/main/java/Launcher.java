@@ -8,25 +8,31 @@ import java.util.Vector;
 public class Launcher {
     private final ICook cook;
     private final Vector<ISavage> savages;
+    private final IExerciseFactory factory;
 
     public Launcher(IExerciseFactory factory) {
         IPot pot = factory.CreatePot();
         this.cook = factory.CreateCook(pot);
         this.savages = factory.CreateSavages(pot);
+
+        this.factory = factory;
     }
 
     public void Execute() {
         cook.start();
         savages.forEach(ISavage::start);
 
-        do {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        } while (savages.stream().allMatch(s -> ((Thread)s).isAlive()));
+        this.factory.AddTimeLimitIfAny(savages);
 
+        try {
+            for (ISavage savage : savages) {
+                ((Thread) savage).join();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //stop cook
         System.out.print("\nCook is stopping because no savage is hungry anymore...\n");
         ((Thread) cook).stop();
     }

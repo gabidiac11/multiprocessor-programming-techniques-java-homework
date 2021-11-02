@@ -47,4 +47,9 @@ public class Savage extends Thread implements ISavage, IThreadEntity {
         incrementor++;
         return String.format("Savage-%d", incrementor - 1);
     }
+
+    @Override
+    public int getIndex() {
+        return i;
+    }
 }
