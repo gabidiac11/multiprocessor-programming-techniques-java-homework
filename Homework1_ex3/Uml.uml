@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Core.IThreadEntity</OriginalElement>
+  <nodes>
+    <node x="591.7686440677966" y="269.0401129943503">Core.ICook</node>
+    <node x="1145.0768361581927" y="567.9790960451977">B.Business.Savage</node>
+    <node x="781.270056497175" y="871.8084745762714">B.ExerciseProviderB</node>
+    <node x="376.26384180790967" y="894.3084745762714">Core.IExerciseFactory</node>
+    <node x="-273.25254237288135" y="646.9254237288135">A.Business.Savage</node>
+    <node x="781.270056497175" y="567.9790960451977">B.Business.Pot</node>
+    <node x="506.2107344632768" y="406.6918079096045">Common.Cook</node>
+    <node x="166.1344632768362" y="406.6918079096045">Core.IPot</node>
+    <node x="-68.74124293785309" y="646.9254237288135">A.Business.Pot</node>
+    <node x="-23.741242937853087" y="871.3084745762714">A.ExerciseProviderA</node>
+    <node x="729.5949152542373" y="269.0401129943503">Core.ISavage</node>
+    <node x="416.0830508474577" y="1085.775141242938">Launcher</node>
+    <node x="528.445197740113" y="-2.8508474576271183">Core.IThreadEntity</node>
+    <node x="395.5830508474577" y="1215.95593220339">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="B.ExerciseProviderB" target="Core.IExerciseFactory" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="919.770056497175" y="1059.0" />
+      <point x="514.7638418079097" y="1059.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="B.Business.Savage" target="Core.ISavage" relationship="REALIZATION">
+      <point x="0.0" y="-128.0" />
+      <point x="1225.0768361581927" y="211.3186440677966" />
+      <point x="937.8451977401133" y="211.3186440677966" />
+      <point x="937.8451977401133" y="455.5186440677966" />
+      <point x="809.5949152542373" y="455.5186440677966" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="B.Business.Savage" target="Core.IThreadEntity" relationship="REALIZATION">
+      <point x="0.0" y="-128.0" />
+      <point x="1225.0768361581927" y="131.0" />
+      <point x="597.945197740113" y="131.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="Common.Cook" target="Core.ICook" relationship="REALIZATION">
+      <point x="0.0" y="-62.0" />
+      <point x="574.7107344632768" y="379.6629943502825" />
+      <point x="644.7686440677966" y="379.6629943502825" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="B.Business.Pot" target="Core.IPot" relationship="REALIZATION">
+      <point x="0.0" y="-138.5" />
+      <point x="327.1344632768362" y="567.9790960451977" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="A.ExerciseProviderA" target="Core.IExerciseFactory" relationship="REALIZATION">
+      <point x="0.0" y="-72.5" />
+      <point x="114.75875706214691" y="1059.0" />
+      <point x="514.7638418079097" y="1059.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="Common.Cook" target="Core.IThreadEntity" relationship="REALIZATION">
+      <point x="-34.184180790960454" y="-64.53587570621465" />
+      <point x="540.5265536723164" y="39.0225988700565" />
+      <point x="597.945197740113" y="39.0225988700565" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="A.Business.Savage" target="Core.ISavage" relationship="REALIZATION">
+      <point x="0.0" y="-117.0" />
+      <point x="-193.25254237288135" y="216.93559322033897" />
+      <point x="809.5949152542373" y="216.93559322033897" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="A.Business.Pot" target="Core.IPot" relationship="REALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="92.25875706214691" y="565.0" />
+      <point x="327.1344632768362" y="565.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="A.Business.Savage" target="Core.IThreadEntity" relationship="REALIZATION">
+      <point x="0.0" y="-117.0" />
+      <point x="-193.25254237288135" y="36.14915254237288" />
+      <point x="540.5145480225989" y="36.14915254237288" />
+      <point x="540.5145480225989" y="75.14915254237289" />
+      <point x="0.0" y="39.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6963021243115657" showDependencies="false" x="535.5" y="463.75649717514125" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
