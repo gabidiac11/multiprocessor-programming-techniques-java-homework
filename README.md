@@ -13,6 +13,6 @@ Diac P. Gabriel 3A2
 
 Codul sursa este impartit in 
 
-           - interfete (actorii: resursa partajata, oala - IPot, consumatorii - ISavage, cel care reincarca resursa - ICook) si 
-           - implementarile care corespund exercitiului rezolvat (3.a sau 3.b). Pentru a alege ce subpunct e executat exista fisierul de configurare "config.txt", unde se adauga "a" sau "b" drept continutul integral al fisierului
+- interfete (actorii: resursa partajata, oala - IPot, consumatorii - ISavage, cel care reincarca resursa - ICook) si 
+- implementarile care corespund exercitiului rezolvat (3.a sau 3.b). Pentru a alege ce subpunct e executat exista fisierul de configurare "config.txt", unde se adauga "a" sau "b" drept continutul integral al fisierului
          
