@@ -7,16 +7,13 @@ import java.util.Arrays;
 import java.util.Vector;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * this extended algorithm that it suppose to solve the consumer-producer problem for multiple producers & consumers
- */
-public class LockBasedQueue implements ILockFreeQueue {
-    int head = 0, tail = 0;
+public class LockBasedQueueVolatile implements ILockFreeQueue {
+    volatile int head = 0, tail = 0;
     private final int QSIZE;
     private final int[] items;
     private final ReentrantLock lock = new ReentrantLock();
 
-    public LockBasedQueue(int size) {
+    public LockBasedQueueVolatile(int size) {
         items =  new int[size];
         QSIZE = size;
     }

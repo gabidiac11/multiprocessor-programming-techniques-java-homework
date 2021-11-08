@@ -16,27 +16,29 @@ public class ThreadEntity extends Thread {
     private final String name;
     private final ILockFreeQueue queue;
     private final Vector<ICommand> commands;
+    private final Verbose v;
 
     public ThreadEntity(String name, ILockFreeQueue queue, Vector<ICommand> commands) {
         this.name = name;
         this.queue = queue;
         this.commands = commands;
+        this.v = new Verbose(this);
     }
 
     @Override
     public void run() {
-        System.out.printf("Thread %s started... \n", getName());
+        //System.out.printf("Thread %s started... \n", getMyName());
 
         while(commands.size() > 0) {
             try {
                 commands.remove(0)
-                        .execute(getMyName(), queue);
+                        .execute(getMyName(), queue, v);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
-        System.out.printf("Thread %s finished... \n", getName());
+        System.out.printf("Thread %s finished... \n", getMyName());
     }
 
     public String getMyName() {

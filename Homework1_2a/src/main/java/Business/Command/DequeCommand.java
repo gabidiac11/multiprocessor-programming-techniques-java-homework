@@ -1,5 +1,6 @@
 package Business.Command;
 
+import Business.Verbose;
 import Core.ICommand;
 import Core.ILockFreeQueue;
 
@@ -12,12 +13,12 @@ public class DequeCommand extends CommandWithSleeping implements ICommand {
     }
 
     @Override
-    public Integer execute(String thName, ILockFreeQueue queue) throws InterruptedException {
-        System.out.printf("Thread %s started: Deque() of queue  : %s\n", thName, queue);
+    public Integer execute(String thName, ILockFreeQueue queue, Verbose v) throws InterruptedException {
+        //System.out.printf("Thread %s started: Deque() of queue  : %s\n", thName, queue);
 
-        int value = queue.deq();
+        int value = queue.deq(v);
 
-        System.out.printf("Thread %s ended  : Deque()=%d of queue: %s\n", thName, value, queue);
+        //System.out.printf("Thread %s ended  : Deque()=%d of queue: %s\n", thName, value, queue);
 
         MaybeSleep(thName);
 

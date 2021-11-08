@@ -1,5 +1,6 @@
 package Business.Command;
 
+import Business.Verbose;
 import Core.ICommand;
 import Core.ILockFreeQueue;
 
@@ -17,10 +18,10 @@ public class EnqueueCommand extends CommandWithSleeping implements ICommand {
     }
 
     @Override
-    public Integer execute(String thName, ILockFreeQueue queue) throws InterruptedException {
+    public Integer execute(String thName, ILockFreeQueue queue, Verbose v) throws InterruptedException {
         System.out.printf("Thread %s started: Enqueue(%d) of queue: %s\n", thName, value, queue);
 
-        queue.enq(value);
+        queue.enq(value, v);
 
         System.out.printf("Thread %s ended  : Enqueue(%d) of queue: %s\n", thName, value, queue);
 
