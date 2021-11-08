@@ -14,8 +14,8 @@ Diac P. Gabriel 3A2
 - [ ] Exercitiu 2a
 - [x] [Exercitiu 2b](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#exercitiu-2b)
 - [x] [Exercitiu 2c](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#exercitiu-2b)
-- [x] [Exercitiu 3a](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md####A)
-- [x] [Exercitiu 3b](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md####B)
+- [x] [Exercitiu 3a](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#a)
+- [x] [Exercitiu 3b](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#b)
 ### Exercitiu 1
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_1/Fig1.PNG)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_1/Fig1.PNG)
 
