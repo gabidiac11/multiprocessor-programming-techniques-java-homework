@@ -86,6 +86,42 @@ Acum, am ajuns intr-un deadlock, ambele threaduri aflandu-se in while loop, aste
 Prin acest exemplu, am demonstrat ca nu este de ajuns doar compararea labelurilor, putand sa se ajunga intr-un deadlock. Astfel, am demonstrat si
 ca este necesara si compararea unui alt criteriu unic (identificatorul de thread).
 
+### Exercitiu 2c
+
+```java
+// lock inainte de try:
+
+someLock.lock();
+try {
+   .....
+}
+finally {
+   someLock.unlock();
+}
+
+```
+
+Este preferat sa facem lock-ul inainte de blocul try, pentru ca daca apelul metodei lock() arunca vreo exceptie, acea exceptie este
+prinsa de catre managerul global de exceptii si se va iesi din functie fara a se mai executa blocurile **try** si **finally**.
+```java
+// lock in cadrul try:
+try {
+   someLock.lock();
+   .....
+}
+finally {
+   someLock.unlock();
+}
+
+```
+
+Daca metoda lock se afla in interiorul blocului **try**, in momentul cand aceasta arunca vreo exceptie, exceptia este prinsa si se
+ajunge cu executia in bloc-ul **finally** unde se incearca apelarea metodei unlock. 
+
+Metoda unlock va incerca sa deblocheze un lock neblocat (*lock-ul a esuat si a aruncat o exceptie*), moment in care va esua 
+si va arunca o exceptie pentru toate tipurile de lock mai putin, ReentrantLock.
+
+Astfel, prima varianta este cea preferata.
 
 ### Exercitiu 3
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)
