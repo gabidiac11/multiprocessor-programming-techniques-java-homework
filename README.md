@@ -14,6 +14,66 @@ Diac P. Gabriel 3A2
 
 Istoria de executie este liniarizabila, putand alege punctele de liniarizare intr-un mod valid,care produce o executie corecta, precum in diagrama de mai sus. Cum istoria de executie este liniarizabila, atunci ea este automat si consistent secventiala.
 
+### Exercitiu 2b
+
+Alogritmul Bakery este definit prin urmatorul pseudocod:
+```java
+1   class Bakery implements Lock {
+2      boolean[] flag;
+3      Label[] label;
+4   
+5      public Bakery (int n) {
+6       	flag  = new boolean[n];
+7       	label = new Label[n];
+8       	for (int i = 0; i < n; i++) { 
+9          		flag[i] = false; label[i] = 0;
+10      	}
+11     }
+12  
+13     public void lock() {  
+14    	flag[i]  = true;  
+15    	label[i] = max(label[0], ... ,label[n-1])+1;
+16    	while (exists k!=i with flag[k]==true && (label[i],i) > (label[k],k)) {};
+17     }
+18  
+19     public void unlock() {  
+20     	flag[i] = false;
+21     }
+22  }
+```
+
+In algoritmul Bakery nu este suficienta doar compararea labelurilor intrucat, datorita limitarilor arhitecturii actuale, 
+la asignarea labelurilor poate aparea un race condition si prin urmare, mai mult de un thread sa primeasca acelasi label.
+Aceasta problema este rezolvata prin adaugarea unui al doilea criteriu de sortare (de obicei numarul threadului), si din
+acest motiv este nevoie sa se compare tupla(label, identificator_thread) si nu doar labelul.
+
+Presupunem ca facem urmatoarea modificare a pseudocodului la linia 16, pentru a compara doar labelurile:
+```java
+while (exists k!=i with flag[k]==true && (label[i],i) > (label[k],k)) {};
+```
+devine
+```java
+while (exists k!=i with flag[k]==true && label[i] > label[k]) {};
+```
+
+Cu acest nou pseudocod, presupunem urmatorul caz:
+
+**PAS 1**. Presupunem ca threadul A se executa primul, intra in metoda lock si isi seteaza flag-ul pe true la linia 14, dupa care 
+se petrece actiunea de context switching si asteapta.
+
+**PAS 2**. Se executa threadul B, intra in metoda lock si isi seteaza flag-ul pe true la linia 14, dupa care se petrece actiunea 
+de context switching si asteapta.
+
+**PAS 3**. Executia continua pe threadul A, si ajunge la linia 16 unde conditia din while va returna true, deci intra in while loop.
+
+**PAS 4**. Executia continua pe threadul B, si ajunge la linia 16 unde conditia din while va returna true, deci intra in while loop.
+
+Acum, am ajuns intr-un deadlock, ambele threaduri aflandu-se in while loop, asteptand ca celalt sa fie eliberat.
+
+Prin acest exemplu, am demonstrat ca nu este de ajuns doar compararea labelurilor, putand sa se ajunga intr-un deadlock. Astfel, am demonstrat si
+ca este necesara si compararea unui alt criteriu unic (identificatorul de thread).
+
+
 ### Exercitiu 3
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)
 
