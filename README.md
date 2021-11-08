@@ -14,6 +14,18 @@ Diac P. Gabriel 3A2
 
 Istoria de executie este liniarizabila, putand alege punctele de liniarizare intr-un mod valid,care produce o executie corecta, precum in diagrama de mai sus. Cum istoria de executie este liniarizabila, atunci ea este automat si consistent secventiala.
 
+Putem rescrie ordinea de executie ca:
+```
+                r = 0
+B r.write(1)    r = 1
+A r.read():1    r = 1
+A r.read():1    r = 1
+C r.write(2)    r = 2
+B r.read():2    r = 2
+B r.read():2    r = 2
+C r.write(1)    r = 1 
+A r.read():1    r = 1
+```
 ### Exercitiu 2b
 
 Alogritmul Bakery este definit prin urmatorul pseudocod:
