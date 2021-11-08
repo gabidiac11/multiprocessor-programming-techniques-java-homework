@@ -10,7 +10,7 @@ Diac P. Gabriel 3A2
 ## Tema 1
 
 ### Exercitiu 1
-[![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_1/Fig1.png)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_1/Fig1.png)
+[![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_1/Fig1.PNG)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_1/Fig1.PNG)
 
 Istoria de executie este liniarizabila, putand alege punctele de liniarizare intr-un mod valid,care produce o executie corecta, precum in diagrama de mai sus. Cum istoria de executie este liniarizabila, atunci ea este automat si consistent secventiala.
 
