@@ -190,7 +190,8 @@ The_Cook started...
 
   Process finished with exit code 0
 ````
-#### B.) Verbose with emphasis at the consistent order of threads and the fairness
+#### B.) 
+Verbose with emphasis at the consistent order of threads and the fairness
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/Fig3.PNG)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/Fig3.PNG)
 
 #### Mentiuni
