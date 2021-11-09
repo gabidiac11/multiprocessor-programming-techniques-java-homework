@@ -78,19 +78,30 @@ while (exists k!=i with flag[k]==true && label[i] > label[k]) {};
 
 Cu acest nou pseudocod, presupunem urmatorul caz:
 
-**PAS 1**. Presupunem ca threadul A se executa primul, intra in metoda lock si isi seteaza flag-ul pe true la linia 14, dupa care 
-se petrece actiunea de context switching si asteapta.
+Fie **A**, **B** doua thread-uri si resursa partajata initializata cu:
+```java
+label = [A:0, B:0]
+flag = [A: false, b: false]
+```
+Executia thread-urilor va decurge in urmatorul fel:
+```java
+write_A(flag[A], true) //linia 14
+write_B(flag[B], true) //linia 14
+        
+read_B(label[A]) -> 0 //linia 15
+read_A(label[B]) -> 0 //linia 15
+        
+write_B(label[B], 1) // linia 15
+write_A(label[A], 1) // linia 15
 
-**PAS 2**. Se executa threadul B, intra in metoda lock si isi seteaza flag-ul pe true la linia 14, dupa care se petrece actiunea 
-de context switching si asteapta.
+evaluate_B(exists k!=i with flag[k]==true && label[i] > label[k]) -> false // linia 16
+evaluate_A(exists k!=i with flag[k]==true && label[i] > label[k]) -> false // linia 16
+```
 
-**PAS 3**. Executia continua pe threadul A, si ajunge la linia 16 unde conditia din while va returna true, deci intra in while loop.
+Cum atat B cat si A au evaluat expresia de la linia 16 ca fiind false, vor intra amandoua in zona critica simultan,
+lucru ce va rezulta intr-un data racing.
 
-**PAS 4**. Executia continua pe threadul B, si ajunge la linia 16 unde conditia din while va returna true, deci intra in while loop.
-
-Acum, am ajuns intr-un deadlock, ambele threaduri aflandu-se in while loop, asteptand ca celalt sa fie eliberat.
-
-Prin acest exemplu, am demonstrat ca nu este de ajuns doar compararea labelurilor, putand sa se ajunga intr-un deadlock. Astfel, am demonstrat si
+Prin acest exemplu, am demonstrat ca nu este de ajuns doar compararea labelurilor, putand sa se ajunga intr-un data race. Astfel, am demonstrat si
 ca este necesara si compararea unui alt criteriu unic (identificatorul de thread).
 
 ### Exercitiu 2c
@@ -122,13 +133,12 @@ finally {
 
 ```
 
-Daca metoda lock se afla in interiorul blocului **try**, in momentul cand aceasta arunca vreo exceptie, exceptia este prinsa si se
+Daca metoda lock se afla in interiorul blocului **try**, si exista vroe problema, in momentul cand aceasta arunca vreo exceptie, exceptia este prinsa si se
 ajunge cu executia in bloc-ul **finally** unde se incearca apelarea metodei unlock. 
 
-Metoda unlock va incerca sa deblocheze un lock neblocat (*lock-ul a esuat si a aruncat o exceptie*), moment in care va esua 
-si va arunca o exceptie pentru toate tipurile de lock mai putin, ReentrantLock.
+Metoda unlock va incerca sa deblocheze un lock nedetinut (*lock-ul a esuat si a aruncat o exceptie*), moment in care va esua 
+si va arunca exceptia **IllegalMonitorStateException**, motiv pentru care prima varianta de cod este preferata.
 
-Astfel, prima varianta este cea preferata.
 
 ### Exercitiu 3
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)
@@ -190,7 +200,8 @@ The_Cook started...
 
   Process finished with exit code 0
 ````
-#### B.) 
+#### B.)
+
 Verbose with emphasis at the consistent order of threads and the fairness
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/Fig3.PNG)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/Fig3.PNG)
 
