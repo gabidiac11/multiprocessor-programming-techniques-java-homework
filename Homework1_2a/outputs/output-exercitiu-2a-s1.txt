@@ -1,0 +1,184 @@
+[1636482942989] Consumer  Consumer2 waiting before while, with tail 0, head 0 ------ holdCount=0 
+[1636482943058] Consumer  Consumer1 waiting before while, with tail 0, head 0 ------ holdCount=0 
+Thread  Producer2 started: Enqueue(1) of queue: []
+[1636482946955] Producer  Producer2 waiting before while, with tail 0, head 0, try to push x=1 
+[1636482946956] Producer  Producer2 ABOUT to locks -> tail 0, head 0, try to push x=1 ------ holdCount=0 
+[1636482946958] Producer  Producer2 is has LOCKED -> tail 0, head 0, try to push x=1 ------ holdCount=1 
+[1636482946960] Producer  Producer2 has ENQUEUED VALUE -> tail 1, head 0, try to push x=1 ------ holdCount=1 
+[1636482946965] Producer  Producer2 is ABOUT to unlock -> tail 1, head 0, try to push x=1 ------ holdCount=1 
+[1636482946972] Producer  Producer2 has UNLOCKED -> tail 1, head 0, try to push x=1 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(1) of queue: [1]
+
+Thread  Producer2 started: Enqueue(2) of queue: [1]
+[1636482946985] Producer  Producer2 waiting before while, with tail 1, head 0, try to push x=2 
+Thread  Producer1 started: Enqueue(1) of queue: [1]
+[1636482946996] Producer  Producer1 waiting before while, with tail 1, head 0, try to push x=1 
+[1636482946998] Producer  Producer1 ABOUT to locks -> tail 1, head 0, try to push x=1 ------ holdCount=0 
+[1636482947029] Producer  Producer1 is has LOCKED -> tail 1, head 0, try to push x=1 ------ holdCount=1 
+[1636482947032] Producer  Producer1 has ENQUEUED VALUE -> tail 2, head 0, try to push x=1 ------ holdCount=1 
+[1636482947036] Producer  Producer1 is ABOUT to unlock -> tail 2, head 0, try to push x=1 ------ holdCount=1 
+[1636482947056] Producer  Producer1 has UNLOCKED -> tail 2, head 0, try to push x=1 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(1) of queue: [1, 1]
+
+Thread  Producer1 started: Enqueue(2) of queue: [1, 1]
+[1636482947062] Producer  Producer1 waiting before while, with tail 2, head 0, try to push x=2 
+[1636482947068] Producer  Producer1 ABOUT to locks -> tail 2, head 0, try to push x=2 ------ holdCount=0 
+[1636482947076] Producer  Producer1 is has LOCKED -> tail 2, head 0, try to push x=2 ------ holdCount=1 
+[1636482947089] Producer  Producer1 has ENQUEUED VALUE -> tail 3, head 0, try to push x=2 ------ holdCount=1 
+[1636482947090] Producer  Producer1 is ABOUT to unlock -> tail 3, head 0, try to push x=2 ------ holdCount=1 
+[1636482947091] Producer  Producer1 has UNLOCKED -> tail 3, head 0, try to push x=2 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(2) of queue: [1, 1, 2]
+
+Thread  Producer1 started: Enqueue(3) of queue: [1, 1, 2]
+[1636482947093] Producer  Producer1 waiting before while, with tail 3, head 0, try to push x=3 
+[1636482947095] Producer  Producer1 ABOUT to locks -> tail 3, head 0, try to push x=3 ------ holdCount=0 
+[1636482947099] Producer  Producer1 is has LOCKED -> tail 3, head 0, try to push x=3 ------ holdCount=1 
+[1636482947100] Producer  Producer1 has ENQUEUED VALUE -> tail 4, head 0, try to push x=3 ------ holdCount=1 
+[1636482947101] Producer  Producer1 is ABOUT to unlock -> tail 4, head 0, try to push x=3 ------ holdCount=1 
+[1636482947102] Producer  Producer1 has UNLOCKED -> tail 4, head 0, try to push x=3 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(3) of queue: [1, 1, 2, 3]
+
+Thread  Producer1 started: Enqueue(4) of queue: [1, 1, 2, 3]
+[1636482947106] Producer  Producer1 waiting before while, with tail 4, head 0, try to push x=4 
+[1636482947108] Producer  Producer1 ABOUT to locks -> tail 4, head 0, try to push x=4 ------ holdCount=0 
+[1636482947110] Producer  Producer1 is has LOCKED -> tail 4, head 0, try to push x=4 ------ holdCount=1 
+[1636482947110] Producer  Producer1 has ENQUEUED VALUE -> tail 5, head 0, try to push x=4 ------ holdCount=1 
+[1636482947112] Producer  Producer1 is ABOUT to unlock -> tail 5, head 0, try to push x=4 ------ holdCount=1 
+[1636482947113] Producer  Producer1 has UNLOCKED -> tail 5, head 0, try to push x=4 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(4) of queue: [1, 1, 2, 3, 4]
+
+Thread  Producer1 started: Enqueue(5) of queue: [1, 1, 2, 3, 4]
+[1636482947119] Producer  Producer1 waiting before while, with tail 5, head 0, try to push x=5 
+[1636482947120] Producer  Producer1 ABOUT to locks -> tail 5, head 0, try to push x=5 ------ holdCount=0 
+[1636482947121] Producer  Producer1 is has LOCKED -> tail 5, head 0, try to push x=5 ------ holdCount=1 
+[1636482947123] Producer  Producer1 has ENQUEUED VALUE -> tail 6, head 0, try to push x=5 ------ holdCount=1 
+[1636482946995] Producer  Producer2 ABOUT to locks -> tail 1, head 0, try to push x=2 ------ holdCount=0 
+[1636482947125] Producer  Producer1 is ABOUT to unlock -> tail 6, head 0, try to push x=5 ------ holdCount=1 
+[1636482947127] Producer  Producer1 has UNLOCKED -> tail 6, head 0, try to push x=5 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(5) of queue: [1, 1, 2, 3, 4, 5]
+
+Thread  Producer1 started: Enqueue(6) of queue: [1, 1, 2, 3, 4, 5]
+[1636482947128] Producer  Producer1 waiting before while, with tail 6, head 0, try to push x=6 
+[1636482947129] Producer  Producer1 ABOUT to locks -> tail 6, head 0, try to push x=6 ------ holdCount=0 
+[1636482947130] Producer  Producer2 is has LOCKED -> tail 6, head 0, try to push x=2 ------ holdCount=1 
+[1636482947132] Producer  Producer2 has ENQUEUED VALUE -> tail 7, head 0, try to push x=2 ------ holdCount=1 
+[1636482947135] Producer  Producer2 is ABOUT to unlock -> tail 7, head 0, try to push x=2 ------ holdCount=1 
+[1636482947142] Producer  Producer2 has UNLOCKED -> tail 7, head 0, try to push x=2 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(2) of queue: [1, 1, 2, 3, 4, 5, 2]
+
+Thread  Producer2 started: Enqueue(3) of queue: [1, 1, 2, 3, 4, 5, 2]
+[1636482947146] Producer  Producer2 waiting before while, with tail 7, head 0, try to push x=3 
+[1636482947147] Producer  Producer2 ABOUT to locks -> tail 7, head 0, try to push x=3 ------ holdCount=0 
+[1636482947158] Producer  Producer2 is has LOCKED -> tail 7, head 0, try to push x=3 ------ holdCount=1 
+[1636482947160] Producer  Producer2 has ENQUEUED VALUE -> tail 8, head 0, try to push x=3 ------ holdCount=1 
+[1636482947161] Producer  Producer2 is ABOUT to unlock -> tail 8, head 0, try to push x=3 ------ holdCount=1 
+[1636482947328] Producer  Producer2 has UNLOCKED -> tail 8, head 0, try to push x=3 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(3) of queue: [1, 1, 2, 3, 4, 5, 2, 3]
+
+Thread  Producer2 started: Enqueue(4) of queue: [1, 1, 2, 3, 4, 5, 2, 3]
+[1636482947331] Producer  Producer2 waiting before while, with tail 8, head 0, try to push x=4 
+[1636482947332] Producer  Producer2 ABOUT to locks -> tail 8, head 0, try to push x=4 ------ holdCount=0 
+[1636482947332] Producer  Producer2 is has LOCKED -> tail 8, head 0, try to push x=4 ------ holdCount=1 
+[1636482947333] Producer  Producer2 has ENQUEUED VALUE -> tail 9, head 0, try to push x=4 ------ holdCount=1 
+[1636482947351] Producer  Producer2 is ABOUT to unlock -> tail 9, head 0, try to push x=4 ------ holdCount=1 
+[1636482947353] Producer  Producer2 has UNLOCKED -> tail 9, head 0, try to push x=4 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(4) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4]
+
+Thread  Producer2 started: Enqueue(5) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4]
+[1636482947357] Producer  Producer2 waiting before while, with tail 9, head 0, try to push x=5 
+[1636482947358] Producer  Producer2 ABOUT to locks -> tail 9, head 0, try to push x=5 ------ holdCount=0 
+[1636482947359] Producer  Producer2 is has LOCKED -> tail 9, head 0, try to push x=5 ------ holdCount=1 
+[1636482947360] Producer  Producer2 has ENQUEUED VALUE -> tail 10, head 0, try to push x=5 ------ holdCount=1 
+[1636482947361] Producer  Producer2 is ABOUT to unlock -> tail 10, head 0, try to push x=5 ------ holdCount=1 
+[1636482947362] Producer  Producer2 has UNLOCKED -> tail 10, head 0, try to push x=5 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(5) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5]
+
+Thread  Producer2 started: Enqueue(6) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5]
+[1636482947365] Producer  Producer2 waiting before while, with tail 10, head 0, try to push x=6 
+[1636482947366] Producer  Producer2 ABOUT to locks -> tail 10, head 0, try to push x=6 ------ holdCount=0 
+[1636482947380] Producer  Producer2 is has LOCKED -> tail 10, head 0, try to push x=6 ------ holdCount=1 
+[1636482947382] Producer  Producer2 has ENQUEUED VALUE -> tail 11, head 0, try to push x=6 ------ holdCount=1 
+[1636482947383] Producer  Producer2 is ABOUT to unlock -> tail 11, head 0, try to push x=6 ------ holdCount=1 
+[1636482947385] Producer  Producer2 has UNLOCKED -> tail 11, head 0, try to push x=6 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(6) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6]
+
+Thread  Producer2 started: Enqueue(7) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6]
+[1636482947389] Producer  Producer2 waiting before while, with tail 11, head 0, try to push x=7 
+[1636482947389] Producer  Producer2 ABOUT to locks -> tail 11, head 0, try to push x=7 ------ holdCount=0 
+[1636482947390] Producer  Producer2 is has LOCKED -> tail 11, head 0, try to push x=7 ------ holdCount=1 
+[1636482947392] Producer  Producer2 has ENQUEUED VALUE -> tail 12, head 0, try to push x=7 ------ holdCount=1 
+[1636482947393] Producer  Producer2 is ABOUT to unlock -> tail 12, head 0, try to push x=7 ------ holdCount=1 
+[1636482947401] Producer  Producer2 has UNLOCKED -> tail 12, head 0, try to push x=7 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(7) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7]
+
+Thread  Producer2 started: Enqueue(8) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7]
+[1636482947403] Producer  Producer2 waiting before while, with tail 12, head 0, try to push x=8 
+[1636482947405] Producer  Producer2 ABOUT to locks -> tail 12, head 0, try to push x=8 ------ holdCount=0 
+[1636482947407] Producer  Producer2 is has LOCKED -> tail 12, head 0, try to push x=8 ------ holdCount=1 
+[1636482947408] Producer  Producer2 has ENQUEUED VALUE -> tail 13, head 0, try to push x=8 ------ holdCount=1 
+[1636482947409] Producer  Producer2 is ABOUT to unlock -> tail 13, head 0, try to push x=8 ------ holdCount=1 
+[1636482947410] Producer  Producer2 has UNLOCKED -> tail 13, head 0, try to push x=8 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(8) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8]
+
+Thread  Producer2 started: Enqueue(9) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8]
+[1636482947412] Producer  Producer2 waiting before while, with tail 13, head 0, try to push x=9 
+[1636482947413] Producer  Producer2 ABOUT to locks -> tail 13, head 0, try to push x=9 ------ holdCount=0 
+[1636482947415] Producer  Producer2 is has LOCKED -> tail 13, head 0, try to push x=9 ------ holdCount=1 
+[1636482947420] Producer  Producer2 has ENQUEUED VALUE -> tail 14, head 0, try to push x=9 ------ holdCount=1 
+[1636482947422] Producer  Producer2 is ABOUT to unlock -> tail 14, head 0, try to push x=9 ------ holdCount=1 
+[1636482947423] Producer  Producer2 has UNLOCKED -> tail 14, head 0, try to push x=9 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(9) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Thread  Producer2 started: Enqueue(10) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9]
+[1636482947428] Producer  Producer2 waiting before while, with tail 14, head 0, try to push x=10 
+[1636482947428] Producer  Producer2 ABOUT to locks -> tail 14, head 0, try to push x=10 ------ holdCount=0 
+[1636482947429] Producer  Producer2 is has LOCKED -> tail 14, head 0, try to push x=10 ------ holdCount=1 
+[1636482947430] Producer  Producer2 has ENQUEUED VALUE -> tail 15, head 0, try to push x=10 ------ holdCount=1 
+[1636482947991] Producer  Producer2 is ABOUT to unlock -> tail 15, head 0, try to push x=10 ------ holdCount=1 
+[1636482947992] Producer  Producer1 is has LOCKED -> tail 15, head 0, try to push x=6 ------ holdCount=1 
+[1636482947993] Producer  Producer1 has ENQUEUED VALUE -> tail 16, head 0, try to push x=6 ------ holdCount=1 
+[1636482947996] Producer  Producer1 is ABOUT to unlock -> tail 16, head 0, try to push x=6 ------ holdCount=1 
+[1636482947997] Producer  Producer1 has UNLOCKED -> tail 16, head 0, try to push x=6 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(6) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6]
+
+Thread  Producer1 started: Enqueue(7) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6]
+[1636482947999] Producer  Producer1 waiting before while, with tail 16, head 0, try to push x=7 
+[1636482948000] Producer  Producer1 ABOUT to locks -> tail 16, head 0, try to push x=7 ------ holdCount=0 
+[1636482948017] Producer  Producer1 is has LOCKED -> tail 16, head 0, try to push x=7 ------ holdCount=1 
+[1636482948018] Producer  Producer1 has ENQUEUED VALUE -> tail 17, head 0, try to push x=7 ------ holdCount=1 
+[1636482948028] Producer  Producer1 is ABOUT to unlock -> tail 17, head 0, try to push x=7 ------ holdCount=1 
+[1636482948029] Producer  Producer1 has UNLOCKED -> tail 17, head 0, try to push x=7 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(7) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7]
+
+Thread  Producer1 started: Enqueue(8) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7]
+[1636482948032] Producer  Producer1 waiting before while, with tail 17, head 0, try to push x=8 
+[1636482948033] Producer  Producer1 ABOUT to locks -> tail 17, head 0, try to push x=8 ------ holdCount=0 
+[1636482948033] Producer  Producer1 is has LOCKED -> tail 17, head 0, try to push x=8 ------ holdCount=1 
+[1636482948040] Producer  Producer1 has ENQUEUED VALUE -> tail 18, head 0, try to push x=8 ------ holdCount=1 
+[1636482948042] Producer  Producer1 is ABOUT to unlock -> tail 18, head 0, try to push x=8 ------ holdCount=1 
+[1636482948042] Producer  Producer1 has UNLOCKED -> tail 18, head 0, try to push x=8 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(8) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7, 8]
+
+Thread  Producer1 started: Enqueue(9) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7, 8]
+[1636482948052] Producer  Producer1 waiting before while, with tail 18, head 0, try to push x=9 
+[1636482948052] Producer  Producer1 ABOUT to locks -> tail 18, head 0, try to push x=9 ------ holdCount=0 
+[1636482948053] Producer  Producer1 is has LOCKED -> tail 18, head 0, try to push x=9 ------ holdCount=1 
+[1636482948056] Producer  Producer1 has ENQUEUED VALUE -> tail 19, head 0, try to push x=9 ------ holdCount=1 
+[1636482948056] Producer  Producer1 is ABOUT to unlock -> tail 19, head 0, try to push x=9 ------ holdCount=1 
+[1636482948057] Producer  Producer1 has UNLOCKED -> tail 19, head 0, try to push x=9 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(9) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7, 8, 9]
+
+Thread  Producer1 started: Enqueue(10) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7, 8, 9]
+[1636482948060] Producer  Producer1 waiting before while, with tail 19, head 0, try to push x=10 
+[1636482948060] Producer  Producer1 ABOUT to locks -> tail 19, head 0, try to push x=10 ------ holdCount=0 
+[1636482948061] Producer  Producer1 is has LOCKED -> tail 19, head 0, try to push x=10 ------ holdCount=1 
+[1636482948062] Producer  Producer1 has ENQUEUED VALUE -> tail 20, head 0, try to push x=10 ------ holdCount=1 
+[1636482948067] Producer  Producer1 is ABOUT to unlock -> tail 20, head 0, try to push x=10 ------ holdCount=1 
+[1636482948070] Producer  Producer1 has UNLOCKED -> tail 20, head 0, try to push x=10 ------ holdCount=0 
+Thread  Producer1 ended  : Enqueue(10) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7, 8, 9, 10]
+
+Thread  Producer1 finished... 
+[1636482948391] Producer  Producer2 has UNLOCKED -> tail 20, head 0, try to push x=10 ------ holdCount=0 
+Thread  Producer2 ended  : Enqueue(10) of queue: [1, 1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 7, 8, 9, 10]
+
+Thread  Producer2 finished... 

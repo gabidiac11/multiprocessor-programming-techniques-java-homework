@@ -13,8 +13,8 @@ import java.util.Vector;
 public class ExecutionRun {
 
     public ExecutionRun() {
-//        consumersGetSuckBecauseOfCaching();
-        otherTest();
+        consumersGetStuckBecauseOfCaching();
+//        volatileQueueTest();
     }
 
     private Vector<ICommand> generateEnqueue(int count) {
@@ -57,7 +57,7 @@ public class ExecutionRun {
      *
      * This gets solved by using "volatile"
      */
-    public void consumersGetSuckBecauseOfCaching() {
+    public void consumersGetStuckBecauseOfCaching() {
         int queueSize = 20;
         LockBasedQueue queue = new LockBasedQueue(queueSize);
 
@@ -94,7 +94,7 @@ public class ExecutionRun {
         }
     }
 
-    public void otherTest() {
+    public void volatileQueueTest() {
         int queueSize = 100;
         ILockFreeQueue queue = new LockBasedQueueVolatile(queueSize);
 
