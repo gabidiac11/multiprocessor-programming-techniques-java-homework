@@ -446,20 +446,22 @@ Folosirea al aceluiasi lacat pentru sectiuni diferite inseamna 2 sectiuni critic
 Acest lucru asigura in acelasi timp ca algoritmul va functiona fara conflicte intre consumatori, si fara conflicte intre producatori. Algoritmul initial pentru un singur consumator si un singur 1 producator nu putea suporta mai multe thread-uri din cauza problemelor generate de executarea concurenta a secvectele de cod:
 
   1. `enq()` (Exemple de probleme: OutOfBoundExeption, un producator poate suprascrie operatia altui producator)
-    ````
-    
-    		items [ tail % QSIZE ] = x; 
-    		tail ++;
-        
-    ````
+  
+````
+
+  items [ tail % QSIZE ] = x; 
+  tail ++;
+
+````
     
   2. `deq()`
-    ```
-    
-    int item = items [ head % QSIZE ]; 
-    head ++;
-    
-    ````
+  
+```
+
+  int item = items [ head % QSIZE ]; 
+  head ++;
+
+````
     
   Prin adaugarea lacatului pe aceste sectiuni se rezolva problemele de mai sus si algoritmul va functiona.
   Observati: 
