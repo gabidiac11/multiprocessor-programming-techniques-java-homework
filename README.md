@@ -11,7 +11,7 @@ Diac P. Gabriel 3A2
 
 ### Continut
 - [x] [Exercitiu 1](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#exercitiu-1)
-- [ ] Exercitiu 2a
+- [x] [Exercitiu 2a](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#exercitiu-2a)
 - [x] [Exercitiu 2b](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#exercitiu-2b)
 - [x] [Exercitiu 2c](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#exercitiu-2b)
 - [x] [Exercitiu 3a](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/README.md#a)
@@ -466,506 +466,1206 @@ Acest lucru asigura in acelasi ca algoritmul sa functioneze fara conflicte intre
     Output-ul cu evitarea evitarea problemelor de optimizare
     </summary>
     [1636479869794] Producer Producer-1 waiting before while, with tail 0, head 0, try to push x=1 
+
 [1636479869795] Producer Producer-1 ABOUT to locks -> tail 0, head 0, try to push x=1 ------ holdCount=0 
+
 Thread Producer-6 started: Enqueue(1) of queue: []
+
 [1636479869796] Producer Producer-6 waiting before while, with tail 0, head 0, try to push x=1 
+
 [1636479869797] Producer Producer-6 ABOUT to locks -> tail 0, head 0, try to push x=1 ------ holdCount=0 
+
 [1636479869798] Producer Producer-1 is has LOCKED -> tail 0, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869798] Producer Producer-1 has ENQUEUED VALUE -> tail 1, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869799] Producer Producer-1 is ABOUT to unlock -> tail 1, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869799] Producer Producer-1 has UNLOCKED -> tail 1, head 0, try to push x=1 ------ holdCount=0 
-Thread Producer-1 ended  : Enqueue(1) of queue: [1]
+
+Thread Producer-1 ended : Enqueue(1) of queue: [1]
 
 Thread Producer-7 started: Enqueue(1) of queue: [1]
+
 [1636479869801] Producer Producer-7 waiting before while, with tail 1, head 0, try to push x=1 
+
 [1636479869801] Producer Producer-7 ABOUT to locks -> tail 1, head 0, try to push x=1 ------ holdCount=0 
+
 [1636479869802] Producer Producer-7 is has LOCKED -> tail 1, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869802] Producer Producer-7 has ENQUEUED VALUE -> tail 2, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869804] Producer Producer-7 is ABOUT to unlock -> tail 2, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869804] Producer Producer-7 has UNLOCKED -> tail 2, head 0, try to push x=1 ------ holdCount=0 
-Thread Producer-7 ended  : Enqueue(1) of queue: [1, 1]
+
+Thread Producer-7 ended : Enqueue(1) of queue: [1, 1]
 
 Thread Producer-7 started: Enqueue(2) of queue: [1, 1]
+
 [1636479869806] Producer Producer-7 waiting before while, with tail 2, head 0, try to push x=2 
+
 [1636479869806] Producer Producer-7 ABOUT to locks -> tail 2, head 0, try to push x=2 ------ holdCount=0 
+
 [1636479869806] Producer Producer-7 is has LOCKED -> tail 2, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479869807] Producer Producer-7 has ENQUEUED VALUE -> tail 3, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479869808] Producer Producer-7 is ABOUT to unlock -> tail 3, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479869808] Producer Producer-7 has UNLOCKED -> tail 3, head 0, try to push x=2 ------ holdCount=0 
-Thread Producer-7 ended  : Enqueue(2) of queue: [1, 1, 2]
+
+Thread Producer-7 ended : Enqueue(2) of queue: [1, 1, 2]
 
 Thread Producer-7 started: Enqueue(3) of queue: [1, 1, 2]
-[1636479869809] Producer Producer-7 waiting before while, with tail 3, head 0, try to push x=3 
-[1636479869810] Producer Producer-7 ABOUT to locks -> tail 3, head 0, try to push x=3 ------ holdCount=0 
-[1636479869810] Producer Producer-7 is has LOCKED -> tail 3, head 0, try to push x=3 ------ holdCount=1 
-[1636479869811] Producer Producer-7 has ENQUEUED VALUE -> tail 4, head 0, try to push x=3 ------ holdCount=1 
-[1636479869811] Producer Producer-7 is ABOUT to unlock -> tail 4, head 0, try to push x=3 ------ holdCount=1 
-[1636479869812] Producer Producer-7 has UNLOCKED -> tail 4, head 0, try to push x=3 ------ holdCount=0 
-Thread Producer-7 ended  : Enqueue(3) of queue: [1, 1, 2, 3]
 
-Thread Producer-7 finished... 
+[1636479869809] Producer Producer-7 waiting before while, with tail 3, head 0, try to push x=3 
+
+[1636479869810] Producer Producer-7 ABOUT to locks -> tail 3, head 0, try to push x=3 ------ holdCount=0 
+
+[1636479869810] Producer Producer-7 is has LOCKED -> tail 3, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479869811] Producer Producer-7 has ENQUEUED VALUE -> tail 4, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479869811] Producer Producer-7 is ABOUT to unlock -> tail 4, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479869812] Producer Producer-7 has UNLOCKED -> tail 4, head 0, try to push x=3 ------ holdCount=0 
+
+Thread Producer-7 ended : Enqueue(3) of queue: [1, 1, 2, 3]
+
+Thread Producer-7 finished.
+
+.
+
+.
+
 Thread Producer-3 started: Enqueue(1) of queue: [1, 1, 2, 3]
+
 [1636479869813] Producer Producer-3 waiting before while, with tail 4, head 0, try to push x=1 
+
 [1636479869814] Producer Producer-3 ABOUT to locks -> tail 4, head 0, try to push x=1 ------ holdCount=0 
+
 [1636479869800] Consumer Consumer-5 waiting before while, with tail 1, head 0 ------ holdCount=0 
-[1636479869815] Consumer Consumer-5 BEFORE lock! with tail 4, head 0 ------ holdCount=0 
+
+[1636479869815] Consumer Consumer-5 BEFORE lock!
+
+with tail 4, head 0 ------ holdCount=0 
+
 [1636479869815] Consumer Consumer-2 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479869816] Consumer Consumer-2 BEFORE lock! with tail 4, head 0 ------ holdCount=0 
+
+[1636479869816] Consumer Consumer-2 BEFORE lock!
+
+with tail 4, head 0 ------ holdCount=0 
+
 [1636479869796] Consumer Consumer-6 waiting before while, with tail 0, head 0 ------ holdCount=0 
-[1636479869817] Consumer Consumer-6 BEFORE lock! with tail 4, head 0 ------ holdCount=0 
+
+[1636479869817] Consumer Consumer-6 BEFORE lock!
+
+with tail 4, head 0 ------ holdCount=0 
+
 Thread Producer-2 started: Enqueue(1) of queue: [1, 1, 2, 3]
+
 [1636479869903] Producer Producer-2 waiting before while, with tail 4, head 0, try to push x=1 
+
 [1636479869914] Producer Producer-2 ABOUT to locks -> tail 4, head 0, try to push x=1 ------ holdCount=0 
+
 [1636479869812] Consumer Consumer-3 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479869933] Consumer Consumer-3 BEFORE lock! with tail 4, head 0 ------ holdCount=0 
+
+[1636479869933] Consumer Consumer-3 BEFORE lock!
+
+with tail 4, head 0 ------ holdCount=0 
+
 [1636479869812] Producer Producer-6 is has LOCKED -> tail 4, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869935] Producer Producer-6 has ENQUEUED VALUE -> tail 5, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869937] Producer Producer-6 is ABOUT to unlock -> tail 5, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479869940] Producer Producer-6 has UNLOCKED -> tail 5, head 0, try to push x=1 ------ holdCount=0 
-Thread Producer-6 ended  : Enqueue(1) of queue: [1, 1, 2, 3, 1]
+
+Thread Producer-6 ended : Enqueue(1) of queue: [1, 1, 2, 3, 1]
 
 Thread Producer-6 started: Enqueue(2) of queue: [1, 1, 2, 3, 1]
+
 [1636479869966] Producer Producer-6 waiting before while, with tail 5, head 0, try to push x=2 
+
 [1636479869967] Producer Producer-6 ABOUT to locks -> tail 5, head 0, try to push x=2 ------ holdCount=0 
+
 [1636479869999] Producer Producer-6 is has LOCKED -> tail 5, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870012] Producer Producer-6 has ENQUEUED VALUE -> tail 6, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870013] Producer Producer-6 is ABOUT to unlock -> tail 6, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870015] Producer Producer-6 has UNLOCKED -> tail 6, head 0, try to push x=2 ------ holdCount=0 
-Thread Producer-6 ended  : Enqueue(2) of queue: [1, 1, 2, 3, 1, 2]
+
+Thread Producer-6 ended : Enqueue(2) of queue: [1, 1, 2, 3, 1, 2]
 
 Thread Producer-6 started: Enqueue(3) of queue: [1, 1, 2, 3, 1, 2]
-[1636479870025] Producer Producer-6 waiting before while, with tail 6, head 0, try to push x=3 
-[1636479870027] Producer Producer-6 ABOUT to locks -> tail 6, head 0, try to push x=3 ------ holdCount=0 
-[1636479870028] Producer Producer-6 is has LOCKED -> tail 6, head 0, try to push x=3 ------ holdCount=1 
-[1636479870029] Producer Producer-6 has ENQUEUED VALUE -> tail 7, head 0, try to push x=3 ------ holdCount=1 
-[1636479870038] Producer Producer-6 is ABOUT to unlock -> tail 7, head 0, try to push x=3 ------ holdCount=1 
-[1636479870039] Producer Producer-6 has UNLOCKED -> tail 7, head 0, try to push x=3 ------ holdCount=0 
-Thread Producer-6 ended  : Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3]
 
-Thread Producer-6 finished... 
+[1636479870025] Producer Producer-6 waiting before while, with tail 6, head 0, try to push x=3 
+
+[1636479870027] Producer Producer-6 ABOUT to locks -> tail 6, head 0, try to push x=3 ------ holdCount=0 
+
+[1636479870028] Producer Producer-6 is has LOCKED -> tail 6, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479870029] Producer Producer-6 has ENQUEUED VALUE -> tail 7, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479870038] Producer Producer-6 is ABOUT to unlock -> tail 7, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479870039] Producer Producer-6 has UNLOCKED -> tail 7, head 0, try to push x=3 ------ holdCount=0 
+
+Thread Producer-6 ended : Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3]
+
+Thread Producer-6 finished.
+
+.
+
+.
+
 Thread Producer-4 started: Enqueue(1) of queue: [1, 1, 2, 3, 1, 2, 3]
+
 [1636479870042] Producer Producer-4 waiting before while, with tail 7, head 0, try to push x=1 
+
 [1636479870069] Producer Producer-4 ABOUT to locks -> tail 7, head 0, try to push x=1 ------ holdCount=0 
+
 [1636479870070] Producer Producer-4 is has LOCKED -> tail 7, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479870071] Producer Producer-4 has ENQUEUED VALUE -> tail 8, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479870072] Producer Producer-4 is ABOUT to unlock -> tail 8, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479870073] Producer Producer-4 has UNLOCKED -> tail 8, head 0, try to push x=1 ------ holdCount=0 
-Thread Producer-4 ended  : Enqueue(1) of queue: [1, 1, 2, 3, 1, 2, 3, 1]
+
+Thread Producer-4 ended : Enqueue(1) of queue: [1, 1, 2, 3, 1, 2, 3, 1]
 
 Thread Producer-4 started: Enqueue(2) of queue: [1, 1, 2, 3, 1, 2, 3, 1]
+
 [1636479870078] Producer Producer-4 waiting before while, with tail 8, head 0, try to push x=2 
+
 [1636479870079] Producer Producer-4 ABOUT to locks -> tail 8, head 0, try to push x=2 ------ holdCount=0 
+
 [1636479870079] Producer Producer-4 is has LOCKED -> tail 8, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870080] Producer Producer-4 has ENQUEUED VALUE -> tail 9, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870081] Producer Producer-4 is ABOUT to unlock -> tail 9, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870082] Producer Producer-4 has UNLOCKED -> tail 9, head 0, try to push x=2 ------ holdCount=0 
-Thread Producer-4 ended  : Enqueue(2) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2]
+
+Thread Producer-4 ended : Enqueue(2) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2]
 
 Thread Producer-4 started: Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2]
-[1636479870084] Producer Producer-4 waiting before while, with tail 9, head 0, try to push x=3 
-[1636479870085] Producer Producer-4 ABOUT to locks -> tail 9, head 0, try to push x=3 ------ holdCount=0 
-[1636479870086] Producer Producer-4 is has LOCKED -> tail 9, head 0, try to push x=3 ------ holdCount=1 
-[1636479870089] Producer Producer-4 has ENQUEUED VALUE -> tail 10, head 0, try to push x=3 ------ holdCount=1 
-[1636479870090] Producer Producer-4 is ABOUT to unlock -> tail 10, head 0, try to push x=3 ------ holdCount=1 
-[1636479870091] Producer Producer-4 has UNLOCKED -> tail 10, head 0, try to push x=3 ------ holdCount=0 
-Thread Producer-4 ended  : Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3]
 
-Thread Producer-4 finished... 
+[1636479870084] Producer Producer-4 waiting before while, with tail 9, head 0, try to push x=3 
+
+[1636479870085] Producer Producer-4 ABOUT to locks -> tail 9, head 0, try to push x=3 ------ holdCount=0 
+
+[1636479870086] Producer Producer-4 is has LOCKED -> tail 9, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479870089] Producer Producer-4 has ENQUEUED VALUE -> tail 10, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479870090] Producer Producer-4 is ABOUT to unlock -> tail 10, head 0, try to push x=3 ------ holdCount=1 
+
+[1636479870091] Producer Producer-4 has UNLOCKED -> tail 10, head 0, try to push x=3 ------ holdCount=0 
+
+Thread Producer-4 ended : Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+Thread Producer-4 finished.
+
+.
+
+.
+
 [1636479870096] Producer Producer-3 is has LOCKED -> tail 10, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479870430] Producer Producer-3 has ENQUEUED VALUE -> tail 11, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479870431] Producer Producer-3 is ABOUT to unlock -> tail 11, head 0, try to push x=1 ------ holdCount=1 
+
 [1636479870432] Producer Producer-3 has UNLOCKED -> tail 11, head 0, try to push x=1 ------ holdCount=0 
-Thread Producer-3 ended  : Enqueue(1) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+
+Thread Producer-3 ended : Enqueue(1) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
 
 Thread Producer-3 started: Enqueue(2) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+
 [1636479870440] Producer Producer-3 waiting before while, with tail 11, head 0, try to push x=2 
+
 [1636479870441] Producer Producer-3 ABOUT to locks -> tail 11, head 0, try to push x=2 ------ holdCount=0 
+
 [1636479870442] Producer Producer-3 is has LOCKED -> tail 11, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870444] Producer Producer-3 has ENQUEUED VALUE -> tail 12, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870445] Producer Producer-3 is ABOUT to unlock -> tail 12, head 0, try to push x=2 ------ holdCount=1 
+
 [1636479870446] Producer Producer-3 has UNLOCKED -> tail 12, head 0, try to push x=2 ------ holdCount=0 
-Thread Producer-3 ended  : Enqueue(2) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2]
+
+Thread Producer-3 ended : Enqueue(2) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2]
 
 Thread Producer-3 started: Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2]
+
 [1636479870448] Producer Producer-3 waiting before while, with tail 12, head 0, try to push x=3 
+
 [1636479870449] Producer Producer-3 ABOUT to locks -> tail 12, head 0, try to push x=3 ------ holdCount=0 
+
 [1636479870451] Producer Producer-3 is has LOCKED -> tail 12, head 0, try to push x=3 ------ holdCount=1 
+
 [1636479870454] Producer Producer-3 has ENQUEUED VALUE -> tail 13, head 0, try to push x=3 ------ holdCount=1 
+
 [1636479870454] Producer Producer-3 is ABOUT to unlock -> tail 13, head 0, try to push x=3 ------ holdCount=1 
+
 [1636479870455] Producer Producer-3 has UNLOCKED -> tail 13, head 0, try to push x=3 ------ holdCount=0 
-Thread Producer-3 ended  : Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
 
-Thread Producer-3 finished... 
+Thread Producer-3 ended : Enqueue(3) of queue: [1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+Thread Producer-3 finished.
+
+.
+
+.
+
 [1636479869807] Consumer Consumer-4 waiting before while, with tail 2, head 0 ------ holdCount=0 
-[1636479870461] Consumer Consumer-4 BEFORE lock! with tail 13, head 0 ------ holdCount=0 
-[1636479870462] Consumer Consumer-4 has LOCKED! with tail 13, head 0 ------ holdCount=1 
-[1636479870463] Consumer Consumer-4 EXTRACTED item 1 with tail 13, head 1 ------ holdCount=1 
-[1636479870463] Consumer Consumer-4 ABOUT to unlock! with tail 13, head 1 ------ holdCount=1 
-[1636479870464] Consumer Consumer-4 has UNLOCKED! with tail 13, head 1 ------ holdCount=0 
 
-[1636479870464] Consumer Consumer-5 has LOCKED! with tail 13, head 1 ------ holdCount=1 
+[1636479870461] Consumer Consumer-4 BEFORE lock!
+
+with tail 13, head 0 ------ holdCount=0 
+
+[1636479870462] Consumer Consumer-4 has LOCKED!
+
+with tail 13, head 0 ------ holdCount=1 
+
+[1636479870463] Consumer Consumer-4 EXTRACTED item 1 with tail 13, head 1 ------ holdCount=1 
+
+[1636479870463] Consumer Consumer-4 ABOUT to unlock!
+
+with tail 13, head 1 ------ holdCount=1 
+
+[1636479870464] Consumer Consumer-4 has UNLOCKED!
+
+with tail 13, head 1 ------ holdCount=0 
+
+[1636479870464] Consumer Consumer-5 has LOCKED!
+
+with tail 13, head 1 ------ holdCount=1 
+
 [1636479870465] Consumer Consumer-5 EXTRACTED item 1 with tail 13, head 2 ------ holdCount=1 
-[1636479870465] Consumer Consumer-5 ABOUT to unlock! with tail 13, head 2 ------ holdCount=1 
-[1636479870465] Consumer Consumer-5 has UNLOCKED! with tail 13, head 2 ------ holdCount=0 
+
+[1636479870465] Consumer Consumer-5 ABOUT to unlock!
+
+with tail 13, head 2 ------ holdCount=1 
+
+[1636479870465] Consumer Consumer-5 has UNLOCKED!
+
+with tail 13, head 2 ------ holdCount=0 
 
 [1636479870466] Consumer Consumer-5 waiting before while, with tail 13, head 2 ------ holdCount=0 
-[1636479870467] Consumer Consumer-5 BEFORE lock! with tail 13, head 2 ------ holdCount=0 
-[1636479870468] Consumer Consumer-5 has LOCKED! with tail 13, head 2 ------ holdCount=1 
+
+[1636479870467] Consumer Consumer-5 BEFORE lock!
+
+with tail 13, head 2 ------ holdCount=0 
+
+[1636479870468] Consumer Consumer-5 has LOCKED!
+
+with tail 13, head 2 ------ holdCount=1 
+
 [1636479870469] Consumer Consumer-5 EXTRACTED item 2 with tail 13, head 3 ------ holdCount=1 
-[1636479870469] Consumer Consumer-5 ABOUT to unlock! with tail 13, head 3 ------ holdCount=1 
-[1636479870470] Consumer Consumer-5 has UNLOCKED! with tail 13, head 3 ------ holdCount=0 
+
+[1636479870469] Consumer Consumer-5 ABOUT to unlock!
+
+with tail 13, head 3 ------ holdCount=1 
+
+[1636479870470] Consumer Consumer-5 has UNLOCKED!
+
+with tail 13, head 3 ------ holdCount=0 
 
 [1636479870471] Consumer Consumer-5 waiting before while, with tail 13, head 3 ------ holdCount=0 
-[1636479870472] Consumer Consumer-5 BEFORE lock! with tail 13, head 3 ------ holdCount=0 
-[1636479870472] Consumer Consumer-5 has LOCKED! with tail 13, head 3 ------ holdCount=1 
-[1636479870473] Consumer Consumer-5 EXTRACTED item 3 with tail 13, head 4 ------ holdCount=1 
-[1636479870474] Consumer Consumer-5 ABOUT to unlock! with tail 13, head 4 ------ holdCount=1 
-[1636479870475] Consumer Consumer-5 has UNLOCKED! with tail 13, head 4 ------ holdCount=0 
 
-Thread Consumer-5 finished... 
+[1636479870472] Consumer Consumer-5 BEFORE lock!
+
+with tail 13, head 3 ------ holdCount=0 
+
+[1636479870472] Consumer Consumer-5 has LOCKED!
+
+with tail 13, head 3 ------ holdCount=1 
+
+[1636479870473] Consumer Consumer-5 EXTRACTED item 3 with tail 13, head 4 ------ holdCount=1 
+
+[1636479870474] Consumer Consumer-5 ABOUT to unlock!
+
+with tail 13, head 4 ------ holdCount=1 
+
+[1636479870475] Consumer Consumer-5 has UNLOCKED!
+
+with tail 13, head 4 ------ holdCount=0 
+
+Thread Consumer-5 finished.
+
+.
+
+.
+
 Thread Producer-1 started: Enqueue(2) of queue: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
 [1636479870476] Producer Producer-1 waiting before while, with tail 13, head 4, try to push x=2 
+
 [1636479870477] Producer Producer-1 ABOUT to locks -> tail 13, head 4, try to push x=2 ------ holdCount=0 
+
 [1636479870478] Producer Producer-1 is has LOCKED -> tail 13, head 4, try to push x=2 ------ holdCount=1 
+
 [1636479870479] Producer Producer-1 has ENQUEUED VALUE -> tail 14, head 4, try to push x=2 ------ holdCount=1 
+
 [1636479870479] Producer Producer-1 is ABOUT to unlock -> tail 14, head 4, try to push x=2 ------ holdCount=1 
+
 [1636479870480] Producer Producer-1 has UNLOCKED -> tail 14, head 4, try to push x=2 ------ holdCount=0 
-Thread Producer-1 ended  : Enqueue(2) of queue: [1, 2, 3, 1, 2, 3, 1, 2, 3, 2]
+
+Thread Producer-1 ended : Enqueue(2) of queue: [1, 2, 3, 1, 2, 3, 1, 2, 3, 2]
 
 Thread Producer-1 started: Enqueue(3) of queue: [1, 2, 3, 1, 2, 3, 1, 2, 3, 2]
+
 [1636479870483] Producer Producer-1 waiting before while, with tail 14, head 4, try to push x=3 
+
 [1636479870484] Producer Producer-1 ABOUT to locks -> tail 14, head 4, try to push x=3 ------ holdCount=0 
+
 Thread Producer-5 started: Enqueue(1) of queue: [1, 2, 3, 1, 2, 3, 1, 2, 3, 2]
+
 [1636479870485] Producer Producer-5 waiting before while, with tail 14, head 4, try to push x=1 
+
 [1636479870486] Producer Producer-5 ABOUT to locks -> tail 14, head 4, try to push x=1 ------ holdCount=0 
-[1636479870484] Consumer Consumer-2 has LOCKED! with tail 14, head 4 ------ holdCount=1 
+
+[1636479870484] Consumer Consumer-2 has LOCKED!
+
+with tail 14, head 4 ------ holdCount=1 
+
 [1636479870487] Consumer Consumer-2 EXTRACTED item 1 with tail 14, head 5 ------ holdCount=1 
-[1636479870488] Consumer Consumer-2 ABOUT to unlock! with tail 14, head 5 ------ holdCount=1 
-[1636479870488] Consumer Consumer-2 has UNLOCKED! with tail 14, head 5 ------ holdCount=0 
+
+[1636479870488] Consumer Consumer-2 ABOUT to unlock!
+
+with tail 14, head 5 ------ holdCount=1 
+
+[1636479870488] Consumer Consumer-2 has UNLOCKED!
+
+with tail 14, head 5 ------ holdCount=0 
 
 [1636479870464] Consumer Consumer-4 waiting before while, with tail 13, head 1 ------ holdCount=0 
-[1636479870495] Consumer Consumer-4 BEFORE lock! with tail 14, head 5 ------ holdCount=0 
-[1636479870496] Consumer Consumer-4 has LOCKED! with tail 14, head 5 ------ holdCount=1 
+
+[1636479870495] Consumer Consumer-4 BEFORE lock!
+
+with tail 14, head 5 ------ holdCount=0 
+
+[1636479870496] Consumer Consumer-4 has LOCKED!
+
+with tail 14, head 5 ------ holdCount=1 
+
 [1636479870496] Consumer Consumer-4 EXTRACTED item 2 with tail 14, head 6 ------ holdCount=1 
-[1636479870497] Consumer Consumer-4 ABOUT to unlock! with tail 14, head 6 ------ holdCount=1 
-[1636479870498] Consumer Consumer-4 has UNLOCKED! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870497] Consumer Consumer-4 ABOUT to unlock!
+
+with tail 14, head 6 ------ holdCount=1 
+
+[1636479870498] Consumer Consumer-4 has UNLOCKED!
+
+with tail 14, head 6 ------ holdCount=0 
 
 [1636479870501] Consumer Consumer-4 waiting before while, with tail 14, head 6 ------ holdCount=0 
-[1636479870501] Consumer Consumer-4 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870501] Consumer Consumer-4 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
 [1636479870501] Consumer Consumer-2 waiting before while, with tail 14, head 6 ------ holdCount=0 
-[1636479870503] Consumer Consumer-2 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870503] Consumer Consumer-2 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
 [1636479869819] Consumer Consumer-10 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479870504] Consumer Consumer-10 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870504] Consumer Consumer-10 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
 Thread Producer-10 started: Enqueue(1) of queue: [3, 1, 2, 3, 1, 2, 3, 2]
+
 [1636479870524] Producer Producer-10 waiting before while, with tail 14, head 6, try to push x=1 
+
 [1636479870524] Producer Producer-10 ABOUT to locks -> tail 14, head 6, try to push x=1 ------ holdCount=0 
+
 Thread Producer-9 started: Enqueue(1) of queue: [3, 1, 2, 3, 1, 2, 3, 2]
+
 [1636479870525] Producer Producer-9 waiting before while, with tail 14, head 6, try to push x=1 
+
 [1636479870544] Producer Producer-9 ABOUT to locks -> tail 14, head 6, try to push x=1 ------ holdCount=0 
+
 [1636479869818] Consumer Consumer-9 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479870556] Consumer Consumer-9 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870556] Consumer Consumer-9 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
 [1636479869818] Consumer Consumer-8 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479870557] Consumer Consumer-8 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870557] Consumer Consumer-8 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
 [1636479869818] Consumer Consumer-7 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479870567] Consumer Consumer-7 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
+
+[1636479870567] Consumer Consumer-7 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
 Thread Producer-8 started: Enqueue(1) of queue: [3, 1, 2, 3, 1, 2, 3, 2]
+
 [1636479870568] Producer Producer-8 waiting before while, with tail 14, head 6, try to push x=1 
+
 [1636479870569] Producer Producer-8 ABOUT to locks -> tail 14, head 6, try to push x=1 ------ holdCount=0 
+
 [1636479869818] Consumer Consumer-1 waiting before while, with tail 4, head 0 ------ holdCount=0 
-[1636479870573] Consumer Consumer-1 BEFORE lock! with tail 14, head 6 ------ holdCount=0 
-[1636479870501] Consumer Consumer-6 has LOCKED! with tail 14, head 6 ------ holdCount=1 
+
+[1636479870573] Consumer Consumer-1 BEFORE lock!
+
+with tail 14, head 6 ------ holdCount=0 
+
+[1636479870501] Consumer Consumer-6 has LOCKED!
+
+with tail 14, head 6 ------ holdCount=1 
+
 [1636479870574] Consumer Consumer-6 EXTRACTED item 3 with tail 14, head 7 ------ holdCount=1 
-[1636479870575] Consumer Consumer-6 ABOUT to unlock! with tail 14, head 7 ------ holdCount=1 
-[1636479870576] Consumer Consumer-6 has UNLOCKED! with tail 14, head 7 ------ holdCount=0 
+
+[1636479870575] Consumer Consumer-6 ABOUT to unlock!
+
+with tail 14, head 7 ------ holdCount=1 
+
+[1636479870576] Consumer Consumer-6 has UNLOCKED!
+
+with tail 14, head 7 ------ holdCount=0 
 
 [1636479870582] Consumer Consumer-6 waiting before while, with tail 14, head 7 ------ holdCount=0 
-[1636479870582] Consumer Consumer-6 BEFORE lock! with tail 14, head 7 ------ holdCount=0 
+
+[1636479870582] Consumer Consumer-6 BEFORE lock!
+
+with tail 14, head 7 ------ holdCount=0 
+
 [1636479870582] Producer Producer-2 is has LOCKED -> tail 14, head 7, try to push x=1 ------ holdCount=1 
+
 [1636479870584] Producer Producer-2 has ENQUEUED VALUE -> tail 15, head 7, try to push x=1 ------ holdCount=1 
+
 [1636479870585] Producer Producer-2 is ABOUT to unlock -> tail 15, head 7, try to push x=1 ------ holdCount=1 
+
 [1636479870585] Producer Producer-2 has UNLOCKED -> tail 15, head 7, try to push x=1 ------ holdCount=0 
-Thread Producer-2 ended  : Enqueue(1) of queue: [1, 2, 3, 1, 2, 3, 2, 1]
+
+Thread Producer-2 ended : Enqueue(1) of queue: [1, 2, 3, 1, 2, 3, 2, 1]
 
 Thread Producer-2 started: Enqueue(2) of queue: [1, 2, 3, 1, 2, 3, 2, 1]
+
 [1636479870590] Producer Producer-2 waiting before while, with tail 15, head 7, try to push x=2 
+
 [1636479870590] Producer Producer-2 ABOUT to locks -> tail 15, head 7, try to push x=2 ------ holdCount=0 
+
 [1636479870591] Producer Producer-2 is has LOCKED -> tail 15, head 7, try to push x=2 ------ holdCount=1 
+
 [1636479870592] Producer Producer-2 has ENQUEUED VALUE -> tail 16, head 7, try to push x=2 ------ holdCount=1 
+
 [1636479870592] Producer Producer-2 is ABOUT to unlock -> tail 16, head 7, try to push x=2 ------ holdCount=1 
+
 [1636479870598] Producer Producer-2 has UNLOCKED -> tail 16, head 7, try to push x=2 ------ holdCount=0 
-Thread Producer-2 ended  : Enqueue(2) of queue: [1, 2, 3, 1, 2, 3, 2, 1, 2]
+
+Thread Producer-2 ended : Enqueue(2) of queue: [1, 2, 3, 1, 2, 3, 2, 1, 2]
 
 Thread Producer-2 started: Enqueue(3) of queue: [1, 2, 3, 1, 2, 3, 2, 1, 2]
-[1636479870601] Producer Producer-2 waiting before while, with tail 16, head 7, try to push x=3 
-[1636479870601] Producer Producer-2 ABOUT to locks -> tail 16, head 7, try to push x=3 ------ holdCount=0 
-[1636479870602] Producer Producer-2 is has LOCKED -> tail 16, head 7, try to push x=3 ------ holdCount=1 
-[1636479870605] Producer Producer-2 has ENQUEUED VALUE -> tail 17, head 7, try to push x=3 ------ holdCount=1 
-[1636479870606] Producer Producer-2 is ABOUT to unlock -> tail 17, head 7, try to push x=3 ------ holdCount=1 
-[1636479870606] Producer Producer-2 has UNLOCKED -> tail 17, head 7, try to push x=3 ------ holdCount=0 
-Thread Producer-2 ended  : Enqueue(3) of queue: [1, 2, 3, 1, 2, 3, 2, 1, 2, 3]
 
-Thread Producer-2 finished... 
-[1636479870608] Consumer Consumer-3 has LOCKED! with tail 17, head 7 ------ holdCount=1 
+[1636479870601] Producer Producer-2 waiting before while, with tail 16, head 7, try to push x=3 
+
+[1636479870601] Producer Producer-2 ABOUT to locks -> tail 16, head 7, try to push x=3 ------ holdCount=0 
+
+[1636479870602] Producer Producer-2 is has LOCKED -> tail 16, head 7, try to push x=3 ------ holdCount=1 
+
+[1636479870605] Producer Producer-2 has ENQUEUED VALUE -> tail 17, head 7, try to push x=3 ------ holdCount=1 
+
+[1636479870606] Producer Producer-2 is ABOUT to unlock -> tail 17, head 7, try to push x=3 ------ holdCount=1 
+
+[1636479870606] Producer Producer-2 has UNLOCKED -> tail 17, head 7, try to push x=3 ------ holdCount=0 
+
+Thread Producer-2 ended : Enqueue(3) of queue: [1, 2, 3, 1, 2, 3, 2, 1, 2, 3]
+
+Thread Producer-2 finished.
+
+.
+
+.
+
+[1636479870608] Consumer Consumer-3 has LOCKED!
+
+with tail 17, head 7 ------ holdCount=1 
+
 [1636479870609] Consumer Consumer-3 EXTRACTED item 1 with tail 17, head 8 ------ holdCount=1 
-[1636479870609] Consumer Consumer-3 ABOUT to unlock! with tail 17, head 8 ------ holdCount=1 
-[1636479870612] Consumer Consumer-3 has UNLOCKED! with tail 17, head 8 ------ holdCount=0 
+
+[1636479870609] Consumer Consumer-3 ABOUT to unlock!
+
+with tail 17, head 8 ------ holdCount=1 
+
+[1636479870612] Consumer Consumer-3 has UNLOCKED!
+
+with tail 17, head 8 ------ holdCount=0 
 
 [1636479870614] Consumer Consumer-3 waiting before while, with tail 17, head 8 ------ holdCount=0 
-[1636479870615] Consumer Consumer-3 BEFORE lock! with tail 17, head 8 ------ holdCount=0 
-[1636479870616] Consumer Consumer-3 has LOCKED! with tail 17, head 8 ------ holdCount=1 
+
+[1636479870615] Consumer Consumer-3 BEFORE lock!
+
+with tail 17, head 8 ------ holdCount=0 
+
+[1636479870616] Consumer Consumer-3 has LOCKED!
+
+with tail 17, head 8 ------ holdCount=1 
+
 [1636479870616] Consumer Consumer-3 EXTRACTED item 2 with tail 17, head 9 ------ holdCount=1 
-[1636479870617] Consumer Consumer-3 ABOUT to unlock! with tail 17, head 9 ------ holdCount=1 
-[1636479870617] Consumer Consumer-3 has UNLOCKED! with tail 17, head 9 ------ holdCount=0 
+
+[1636479870617] Consumer Consumer-3 ABOUT to unlock!
+
+with tail 17, head 9 ------ holdCount=1 
+
+[1636479870617] Consumer Consumer-3 has UNLOCKED!
+
+with tail 17, head 9 ------ holdCount=0 
 
 [1636479870617] Consumer Consumer-3 waiting before while, with tail 17, head 9 ------ holdCount=0 
-[1636479870618] Consumer Consumer-3 BEFORE lock! with tail 17, head 9 ------ holdCount=0 
-[1636479870617] Producer Producer-1 is has LOCKED -> tail 17, head 9, try to push x=3 ------ holdCount=1 
-[1636479870624] Producer Producer-1 has ENQUEUED VALUE -> tail 18, head 9, try to push x=3 ------ holdCount=1 
-[1636479870625] Producer Producer-1 is ABOUT to unlock -> tail 18, head 9, try to push x=3 ------ holdCount=1 
-[1636479870626] Producer Producer-1 has UNLOCKED -> tail 18, head 9, try to push x=3 ------ holdCount=0 
-Thread Producer-1 ended  : Enqueue(3) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3]
 
-Thread Producer-1 finished... 
+[1636479870618] Consumer Consumer-3 BEFORE lock!
+
+with tail 17, head 9 ------ holdCount=0 
+
+[1636479870617] Producer Producer-1 is has LOCKED -> tail 17, head 9, try to push x=3 ------ holdCount=1 
+
+[1636479870624] Producer Producer-1 has ENQUEUED VALUE -> tail 18, head 9, try to push x=3 ------ holdCount=1 
+
+[1636479870625] Producer Producer-1 is ABOUT to unlock -> tail 18, head 9, try to push x=3 ------ holdCount=1 
+
+[1636479870626] Producer Producer-1 has UNLOCKED -> tail 18, head 9, try to push x=3 ------ holdCount=0 
+
+Thread Producer-1 ended : Enqueue(3) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3]
+
+Thread Producer-1 finished.
+
+.
+
+.
+
 [1636479870703] Producer Producer-5 is has LOCKED -> tail 18, head 9, try to push x=1 ------ holdCount=1 
+
 [1636479870704] Producer Producer-5 has ENQUEUED VALUE -> tail 19, head 9, try to push x=1 ------ holdCount=1 
+
 [1636479870706] Producer Producer-5 is ABOUT to unlock -> tail 19, head 9, try to push x=1 ------ holdCount=1 
+
 [1636479870712] Producer Producer-5 has UNLOCKED -> tail 19, head 9, try to push x=1 ------ holdCount=0 
-Thread Producer-5 ended  : Enqueue(1) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1]
+
+Thread Producer-5 ended : Enqueue(1) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1]
 
 Thread Producer-5 started: Enqueue(2) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1]
+
 [1636479870714] Producer Producer-5 waiting before while, with tail 19, head 9, try to push x=2 
+
 [1636479870715] Producer Producer-5 ABOUT to locks -> tail 19, head 9, try to push x=2 ------ holdCount=0 
+
 [1636479870716] Producer Producer-5 is has LOCKED -> tail 19, head 9, try to push x=2 ------ holdCount=1 
+
 [1636479870716] Producer Producer-5 has ENQUEUED VALUE -> tail 20, head 9, try to push x=2 ------ holdCount=1 
+
 [1636479870724] Producer Producer-5 is ABOUT to unlock -> tail 20, head 9, try to push x=2 ------ holdCount=1 
+
 [1636479870725] Producer Producer-5 has UNLOCKED -> tail 20, head 9, try to push x=2 ------ holdCount=0 
-Thread Producer-5 ended  : Enqueue(2) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1, 2]
+
+Thread Producer-5 ended : Enqueue(2) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1, 2]
 
 Thread Producer-5 started: Enqueue(3) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1, 2]
+
 [1636479870728] Producer Producer-5 waiting before while, with tail 20, head 9, try to push x=3 
+
 [1636479870729] Producer Producer-5 ABOUT to locks -> tail 20, head 9, try to push x=3 ------ holdCount=0 
+
 [1636479870729] Producer Producer-5 is has LOCKED -> tail 20, head 9, try to push x=3 ------ holdCount=1 
+
 [1636479870729] Producer Producer-5 has ENQUEUED VALUE -> tail 21, head 9, try to push x=3 ------ holdCount=1 
+
 [1636479870729] Producer Producer-5 is ABOUT to unlock -> tail 21, head 9, try to push x=3 ------ holdCount=1 
+
 [1636479870729] Producer Producer-5 has UNLOCKED -> tail 21, head 9, try to push x=3 ------ holdCount=0 
-Thread Producer-5 ended  : Enqueue(3) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1, 2, 3]
 
-Thread Producer-5 finished... 
-[1636479870736] Consumer Consumer-4 has LOCKED! with tail 21, head 9 ------ holdCount=1 
+Thread Producer-5 ended : Enqueue(3) of queue: [3, 1, 2, 3, 2, 1, 2, 3, 3, 1, 2, 3]
+
+Thread Producer-5 finished.
+
+.
+
+.
+
+[1636479870736] Consumer Consumer-4 has LOCKED!
+
+with tail 21, head 9 ------ holdCount=1 
+
 [1636479870736] Consumer Consumer-4 EXTRACTED item 3 with tail 21, head 10 ------ holdCount=1 
-[1636479870737] Consumer Consumer-4 ABOUT to unlock! with tail 21, head 10 ------ holdCount=1 
-[1636479870737] Consumer Consumer-4 has UNLOCKED! with tail 21, head 10 ------ holdCount=0 
 
-Thread Consumer-4 finished... 
-[1636479870739] Consumer Consumer-2 has LOCKED! with tail 21, head 10 ------ holdCount=1 
+[1636479870737] Consumer Consumer-4 ABOUT to unlock!
+
+with tail 21, head 10 ------ holdCount=1 
+
+[1636479870737] Consumer Consumer-4 has UNLOCKED!
+
+with tail 21, head 10 ------ holdCount=0 
+
+Thread Consumer-4 finished.
+
+.
+
+.
+
+[1636479870739] Consumer Consumer-2 has LOCKED!
+
+with tail 21, head 10 ------ holdCount=1 
+
 [1636479870740] Consumer Consumer-2 EXTRACTED item 1 with tail 21, head 11 ------ holdCount=1 
-[1636479870740] Consumer Consumer-2 ABOUT to unlock! with tail 21, head 11 ------ holdCount=1 
-[1636479870740] Consumer Consumer-2 has UNLOCKED! with tail 21, head 11 ------ holdCount=0 
+
+[1636479870740] Consumer Consumer-2 ABOUT to unlock!
+
+with tail 21, head 11 ------ holdCount=1 
+
+[1636479870740] Consumer Consumer-2 has UNLOCKED!
+
+with tail 21, head 11 ------ holdCount=0 
 
 [1636479870740] Consumer Consumer-2 waiting before while, with tail 21, head 11 ------ holdCount=0 
-[1636479870740] Consumer Consumer-2 BEFORE lock! with tail 21, head 11 ------ holdCount=0 
-[1636479870740] Consumer Consumer-2 has LOCKED! with tail 21, head 11 ------ holdCount=1 
-[1636479870740] Consumer Consumer-2 EXTRACTED item 2 with tail 21, head 12 ------ holdCount=1 
-[1636479870740] Consumer Consumer-2 ABOUT to unlock! with tail 21, head 12 ------ holdCount=1 
-[1636479870740] Consumer Consumer-2 has UNLOCKED! with tail 21, head 12 ------ holdCount=0 
 
-Thread Consumer-2 finished... 
-[1636479870741] Consumer Consumer-10 has LOCKED! with tail 21, head 12 ------ holdCount=1 
+[1636479870740] Consumer Consumer-2 BEFORE lock!
+
+with tail 21, head 11 ------ holdCount=0 
+
+[1636479870740] Consumer Consumer-2 has LOCKED!
+
+with tail 21, head 11 ------ holdCount=1 
+
+[1636479870740] Consumer Consumer-2 EXTRACTED item 2 with tail 21, head 12 ------ holdCount=1 
+
+[1636479870740] Consumer Consumer-2 ABOUT to unlock!
+
+with tail 21, head 12 ------ holdCount=1 
+
+[1636479870740] Consumer Consumer-2 has UNLOCKED!
+
+with tail 21, head 12 ------ holdCount=0 
+
+Thread Consumer-2 finished.
+
+.
+
+.
+
+[1636479870741] Consumer Consumer-10 has LOCKED!
+
+with tail 21, head 12 ------ holdCount=1 
+
 [1636479870741] Consumer Consumer-10 EXTRACTED item 3 with tail 21, head 13 ------ holdCount=1 
-[1636479870741] Consumer Consumer-10 ABOUT to unlock! with tail 21, head 13 ------ holdCount=1 
-[1636479870741] Consumer Consumer-10 has UNLOCKED! with tail 21, head 13 ------ holdCount=0 
+
+[1636479870741] Consumer Consumer-10 ABOUT to unlock!
+
+with tail 21, head 13 ------ holdCount=1 
+
+[1636479870741] Consumer Consumer-10 has UNLOCKED!
+
+with tail 21, head 13 ------ holdCount=0 
 
 [1636479870741] Consumer Consumer-10 waiting before while, with tail 21, head 13 ------ holdCount=0 
-[1636479870741] Consumer Consumer-10 BEFORE lock! with tail 21, head 13 ------ holdCount=0 
-[1636479870741] Consumer Consumer-10 has LOCKED! with tail 21, head 13 ------ holdCount=1 
+
+[1636479870741] Consumer Consumer-10 BEFORE lock!
+
+with tail 21, head 13 ------ holdCount=0 
+
+[1636479870741] Consumer Consumer-10 has LOCKED!
+
+with tail 21, head 13 ------ holdCount=1 
+
 [1636479870741] Consumer Consumer-10 EXTRACTED item 2 with tail 21, head 14 ------ holdCount=1 
-[1636479870742] Consumer Consumer-10 ABOUT to unlock! with tail 21, head 14 ------ holdCount=1 
-[1636479870742] Consumer Consumer-10 has UNLOCKED! with tail 21, head 14 ------ holdCount=0 
+
+[1636479870742] Consumer Consumer-10 ABOUT to unlock!
+
+with tail 21, head 14 ------ holdCount=1 
+
+[1636479870742] Consumer Consumer-10 has UNLOCKED!
+
+with tail 21, head 14 ------ holdCount=0 
 
 [1636479870742] Consumer Consumer-10 waiting before while, with tail 21, head 14 ------ holdCount=0 
-[1636479870742] Consumer Consumer-10 BEFORE lock! with tail 21, head 14 ------ holdCount=0 
-[1636479870742] Consumer Consumer-10 has LOCKED! with tail 21, head 14 ------ holdCount=1 
-[1636479870748] Consumer Consumer-10 EXTRACTED item 1 with tail 21, head 15 ------ holdCount=1 
-[1636479870748] Consumer Consumer-10 ABOUT to unlock! with tail 21, head 15 ------ holdCount=1 
-[1636479870748] Consumer Consumer-10 has UNLOCKED! with tail 21, head 15 ------ holdCount=0 
 
-Thread Consumer-10 finished... 
+[1636479870742] Consumer Consumer-10 BEFORE lock!
+
+with tail 21, head 14 ------ holdCount=0 
+
+[1636479870742] Consumer Consumer-10 has LOCKED!
+
+with tail 21, head 14 ------ holdCount=1 
+
+[1636479870748] Consumer Consumer-10 EXTRACTED item 1 with tail 21, head 15 ------ holdCount=1 
+
+[1636479870748] Consumer Consumer-10 ABOUT to unlock!
+
+with tail 21, head 15 ------ holdCount=1 
+
+[1636479870748] Consumer Consumer-10 has UNLOCKED!
+
+with tail 21, head 15 ------ holdCount=0 
+
+Thread Consumer-10 finished.
+
+.
+
+.
+
 [1636479870749] Producer Producer-10 is has LOCKED -> tail 21, head 15, try to push x=1 ------ holdCount=1 
+
 [1636479870749] Producer Producer-10 has ENQUEUED VALUE -> tail 22, head 15, try to push x=1 ------ holdCount=1 
+
 [1636479870749] Producer Producer-10 is ABOUT to unlock -> tail 22, head 15, try to push x=1 ------ holdCount=1 
+
 [1636479870749] Producer Producer-10 has UNLOCKED -> tail 22, head 15, try to push x=1 ------ holdCount=0 
-Thread Producer-10 ended  : Enqueue(1) of queue: [2, 3, 3, 1, 2, 3, 1]
+
+Thread Producer-10 ended : Enqueue(1) of queue: [2, 3, 3, 1, 2, 3, 1]
 
 Thread Producer-10 started: Enqueue(2) of queue: [2, 3, 3, 1, 2, 3, 1]
+
 [1636479870749] Producer Producer-10 waiting before while, with tail 22, head 15, try to push x=2 
+
 [1636479870750] Producer Producer-10 ABOUT to locks -> tail 22, head 15, try to push x=2 ------ holdCount=0 
+
 [1636479870750] Producer Producer-10 is has LOCKED -> tail 22, head 15, try to push x=2 ------ holdCount=1 
+
 [1636479870750] Producer Producer-10 has ENQUEUED VALUE -> tail 23, head 15, try to push x=2 ------ holdCount=1 
+
 [1636479870750] Producer Producer-10 is ABOUT to unlock -> tail 23, head 15, try to push x=2 ------ holdCount=1 
+
 [1636479870750] Producer Producer-10 has UNLOCKED -> tail 23, head 15, try to push x=2 ------ holdCount=0 
-Thread Producer-10 ended  : Enqueue(2) of queue: [2, 3, 3, 1, 2, 3, 1, 2]
+
+Thread Producer-10 ended : Enqueue(2) of queue: [2, 3, 3, 1, 2, 3, 1, 2]
 
 Thread Producer-10 started: Enqueue(3) of queue: [2, 3, 3, 1, 2, 3, 1, 2]
-[1636479870751] Producer Producer-10 waiting before while, with tail 23, head 15, try to push x=3 
-[1636479870751] Producer Producer-10 ABOUT to locks -> tail 23, head 15, try to push x=3 ------ holdCount=0 
-[1636479870751] Producer Producer-10 is has LOCKED -> tail 23, head 15, try to push x=3 ------ holdCount=1 
-[1636479870751] Producer Producer-10 has ENQUEUED VALUE -> tail 24, head 15, try to push x=3 ------ holdCount=1 
-[1636479870752] Producer Producer-10 is ABOUT to unlock -> tail 24, head 15, try to push x=3 ------ holdCount=1 
-[1636479870755] Producer Producer-10 has UNLOCKED -> tail 24, head 15, try to push x=3 ------ holdCount=0 
-Thread Producer-10 ended  : Enqueue(3) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3]
 
-Thread Producer-10 finished... 
+[1636479870751] Producer Producer-10 waiting before while, with tail 23, head 15, try to push x=3 
+
+[1636479870751] Producer Producer-10 ABOUT to locks -> tail 23, head 15, try to push x=3 ------ holdCount=0 
+
+[1636479870751] Producer Producer-10 is has LOCKED -> tail 23, head 15, try to push x=3 ------ holdCount=1 
+
+[1636479870751] Producer Producer-10 has ENQUEUED VALUE -> tail 24, head 15, try to push x=3 ------ holdCount=1 
+
+[1636479870752] Producer Producer-10 is ABOUT to unlock -> tail 24, head 15, try to push x=3 ------ holdCount=1 
+
+[1636479870755] Producer Producer-10 has UNLOCKED -> tail 24, head 15, try to push x=3 ------ holdCount=0 
+
+Thread Producer-10 ended : Enqueue(3) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3]
+
+Thread Producer-10 finished.
+
+.
+
+.
+
 [1636479870756] Producer Producer-9 is has LOCKED -> tail 24, head 15, try to push x=1 ------ holdCount=1 
+
 [1636479870757] Producer Producer-9 has ENQUEUED VALUE -> tail 25, head 15, try to push x=1 ------ holdCount=1 
+
 [1636479870758] Producer Producer-9 is ABOUT to unlock -> tail 25, head 15, try to push x=1 ------ holdCount=1 
+
 [1636479870758] Producer Producer-9 has UNLOCKED -> tail 25, head 15, try to push x=1 ------ holdCount=0 
-Thread Producer-9 ended  : Enqueue(1) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1]
+
+Thread Producer-9 ended : Enqueue(1) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1]
 
 Thread Producer-9 started: Enqueue(2) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1]
+
 [1636479870761] Producer Producer-9 waiting before while, with tail 25, head 15, try to push x=2 
+
 [1636479870762] Producer Producer-9 ABOUT to locks -> tail 25, head 15, try to push x=2 ------ holdCount=0 
+
 [1636479870763] Producer Producer-9 is has LOCKED -> tail 25, head 15, try to push x=2 ------ holdCount=1 
+
 [1636479870764] Producer Producer-9 has ENQUEUED VALUE -> tail 26, head 15, try to push x=2 ------ holdCount=1 
+
 [1636479870764] Producer Producer-9 is ABOUT to unlock -> tail 26, head 15, try to push x=2 ------ holdCount=1 
+
 [1636479870765] Producer Producer-9 has UNLOCKED -> tail 26, head 15, try to push x=2 ------ holdCount=0 
-Thread Producer-9 ended  : Enqueue(2) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2]
+
+Thread Producer-9 ended : Enqueue(2) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2]
 
 Thread Producer-9 started: Enqueue(3) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2]
-[1636479870767] Producer Producer-9 waiting before while, with tail 26, head 15, try to push x=3 
-[1636479870767] Producer Producer-9 ABOUT to locks -> tail 26, head 15, try to push x=3 ------ holdCount=0 
-[1636479870768] Producer Producer-9 is has LOCKED -> tail 26, head 15, try to push x=3 ------ holdCount=1 
-[1636479870769] Producer Producer-9 has ENQUEUED VALUE -> tail 27, head 15, try to push x=3 ------ holdCount=1 
-[1636479870769] Producer Producer-9 is ABOUT to unlock -> tail 27, head 15, try to push x=3 ------ holdCount=1 
-[1636479870770] Producer Producer-9 has UNLOCKED -> tail 27, head 15, try to push x=3 ------ holdCount=0 
-Thread Producer-9 ended  : Enqueue(3) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
 
-Thread Producer-9 finished... 
-[1636479870775] Consumer Consumer-9 has LOCKED! with tail 27, head 15 ------ holdCount=1 
+[1636479870767] Producer Producer-9 waiting before while, with tail 26, head 15, try to push x=3 
+
+[1636479870767] Producer Producer-9 ABOUT to locks -> tail 26, head 15, try to push x=3 ------ holdCount=0 
+
+[1636479870768] Producer Producer-9 is has LOCKED -> tail 26, head 15, try to push x=3 ------ holdCount=1 
+
+[1636479870769] Producer Producer-9 has ENQUEUED VALUE -> tail 27, head 15, try to push x=3 ------ holdCount=1 
+
+[1636479870769] Producer Producer-9 is ABOUT to unlock -> tail 27, head 15, try to push x=3 ------ holdCount=1 
+
+[1636479870770] Producer Producer-9 has UNLOCKED -> tail 27, head 15, try to push x=3 ------ holdCount=0 
+
+Thread Producer-9 ended : Enqueue(3) of queue: [2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+Thread Producer-9 finished.
+
+.
+
+.
+
+[1636479870775] Consumer Consumer-9 has LOCKED!
+
+with tail 27, head 15 ------ holdCount=1 
+
 [1636479870776] Consumer Consumer-9 EXTRACTED item 2 with tail 27, head 16 ------ holdCount=1 
-[1636479870776] Consumer Consumer-9 ABOUT to unlock! with tail 27, head 16 ------ holdCount=1 
-[1636479870778] Consumer Consumer-9 has UNLOCKED! with tail 27, head 16 ------ holdCount=0 
+
+[1636479870776] Consumer Consumer-9 ABOUT to unlock!
+
+with tail 27, head 16 ------ holdCount=1 
+
+[1636479870778] Consumer Consumer-9 has UNLOCKED!
+
+with tail 27, head 16 ------ holdCount=0 
 
 [1636479870779] Consumer Consumer-9 waiting before while, with tail 27, head 16 ------ holdCount=0 
-[1636479870780] Consumer Consumer-9 BEFORE lock! with tail 27, head 16 ------ holdCount=0 
-[1636479870780] Consumer Consumer-9 has LOCKED! with tail 27, head 16 ------ holdCount=1 
+
+[1636479870780] Consumer Consumer-9 BEFORE lock!
+
+with tail 27, head 16 ------ holdCount=0 
+
+[1636479870780] Consumer Consumer-9 has LOCKED!
+
+with tail 27, head 16 ------ holdCount=1 
+
 [1636479870781] Consumer Consumer-9 EXTRACTED item 3 with tail 27, head 17 ------ holdCount=1 
-[1636479870782] Consumer Consumer-9 ABOUT to unlock! with tail 27, head 17 ------ holdCount=1 
-[1636479870783] Consumer Consumer-9 has UNLOCKED! with tail 27, head 17 ------ holdCount=0 
+
+[1636479870782] Consumer Consumer-9 ABOUT to unlock!
+
+with tail 27, head 17 ------ holdCount=1 
+
+[1636479870783] Consumer Consumer-9 has UNLOCKED!
+
+with tail 27, head 17 ------ holdCount=0 
 
 [1636479870783] Consumer Consumer-9 waiting before while, with tail 27, head 17 ------ holdCount=0 
-[1636479870784] Consumer Consumer-9 BEFORE lock! with tail 27, head 17 ------ holdCount=0 
-[1636479870785] Consumer Consumer-9 has LOCKED! with tail 27, head 17 ------ holdCount=1 
-[1636479870785] Consumer Consumer-9 EXTRACTED item 3 with tail 27, head 18 ------ holdCount=1 
-[1636479870786] Consumer Consumer-9 ABOUT to unlock! with tail 27, head 18 ------ holdCount=1 
-[1636479870787] Consumer Consumer-9 has UNLOCKED! with tail 27, head 18 ------ holdCount=0 
 
-Thread Consumer-9 finished... 
-[1636479870788] Consumer Consumer-8 has LOCKED! with tail 27, head 18 ------ holdCount=1 
+[1636479870784] Consumer Consumer-9 BEFORE lock!
+
+with tail 27, head 17 ------ holdCount=0 
+
+[1636479870785] Consumer Consumer-9 has LOCKED!
+
+with tail 27, head 17 ------ holdCount=1 
+
+[1636479870785] Consumer Consumer-9 EXTRACTED item 3 with tail 27, head 18 ------ holdCount=1 
+
+[1636479870786] Consumer Consumer-9 ABOUT to unlock!
+
+with tail 27, head 18 ------ holdCount=1 
+
+[1636479870787] Consumer Consumer-9 has UNLOCKED!
+
+with tail 27, head 18 ------ holdCount=0 
+
+Thread Consumer-9 finished.
+
+.
+
+.
+
+[1636479870788] Consumer Consumer-8 has LOCKED!
+
+with tail 27, head 18 ------ holdCount=1 
+
 [1636479870789] Consumer Consumer-8 EXTRACTED item 1 with tail 27, head 19 ------ holdCount=1 
-[1636479870790] Consumer Consumer-8 ABOUT to unlock! with tail 27, head 19 ------ holdCount=1 
-[1636479870791] Consumer Consumer-8 has UNLOCKED! with tail 27, head 19 ------ holdCount=0 
+
+[1636479870790] Consumer Consumer-8 ABOUT to unlock!
+
+with tail 27, head 19 ------ holdCount=1 
+
+[1636479870791] Consumer Consumer-8 has UNLOCKED!
+
+with tail 27, head 19 ------ holdCount=0 
 
 [1636479870792] Consumer Consumer-8 waiting before while, with tail 27, head 19 ------ holdCount=0 
-[1636479870792] Consumer Consumer-8 BEFORE lock! with tail 27, head 19 ------ holdCount=0 
-[1636479870793] Consumer Consumer-8 has LOCKED! with tail 27, head 19 ------ holdCount=1 
+
+[1636479870792] Consumer Consumer-8 BEFORE lock!
+
+with tail 27, head 19 ------ holdCount=0 
+
+[1636479870793] Consumer Consumer-8 has LOCKED!
+
+with tail 27, head 19 ------ holdCount=1 
+
 [1636479870794] Consumer Consumer-8 EXTRACTED item 2 with tail 27, head 20 ------ holdCount=1 
-[1636479870795] Consumer Consumer-8 ABOUT to unlock! with tail 27, head 20 ------ holdCount=1 
-[1636479870795] Consumer Consumer-8 has UNLOCKED! with tail 27, head 20 ------ holdCount=0 
+
+[1636479870795] Consumer Consumer-8 ABOUT to unlock!
+
+with tail 27, head 20 ------ holdCount=1 
+
+[1636479870795] Consumer Consumer-8 has UNLOCKED!
+
+with tail 27, head 20 ------ holdCount=0 
 
 [1636479870796] Consumer Consumer-8 waiting before while, with tail 27, head 20 ------ holdCount=0 
-[1636479870797] Consumer Consumer-8 BEFORE lock! with tail 27, head 20 ------ holdCount=0 
-[1636479870797] Consumer Consumer-8 has LOCKED! with tail 27, head 20 ------ holdCount=1 
-[1636479870802] Consumer Consumer-8 EXTRACTED item 3 with tail 27, head 21 ------ holdCount=1 
-[1636479870803] Consumer Consumer-8 ABOUT to unlock! with tail 27, head 21 ------ holdCount=1 
-[1636479870804] Consumer Consumer-8 has UNLOCKED! with tail 27, head 21 ------ holdCount=0 
 
-Thread Consumer-8 finished... 
-[1636479870805] Consumer Consumer-7 has LOCKED! with tail 27, head 21 ------ holdCount=1 
+[1636479870797] Consumer Consumer-8 BEFORE lock!
+
+with tail 27, head 20 ------ holdCount=0 
+
+[1636479870797] Consumer Consumer-8 has LOCKED!
+
+with tail 27, head 20 ------ holdCount=1 
+
+[1636479870802] Consumer Consumer-8 EXTRACTED item 3 with tail 27, head 21 ------ holdCount=1 
+
+[1636479870803] Consumer Consumer-8 ABOUT to unlock!
+
+with tail 27, head 21 ------ holdCount=1 
+
+[1636479870804] Consumer Consumer-8 has UNLOCKED!
+
+with tail 27, head 21 ------ holdCount=0 
+
+Thread Consumer-8 finished.
+
+.
+
+.
+
+[1636479870805] Consumer Consumer-7 has LOCKED!
+
+with tail 27, head 21 ------ holdCount=1 
+
 [1636479870805] Consumer Consumer-7 EXTRACTED item 1 with tail 27, head 22 ------ holdCount=1 
-[1636479870806] Consumer Consumer-7 ABOUT to unlock! with tail 27, head 22 ------ holdCount=1 
-[1636479870807] Consumer Consumer-7 has UNLOCKED! with tail 27, head 22 ------ holdCount=0 
+
+[1636479870806] Consumer Consumer-7 ABOUT to unlock!
+
+with tail 27, head 22 ------ holdCount=1 
+
+[1636479870807] Consumer Consumer-7 has UNLOCKED!
+
+with tail 27, head 22 ------ holdCount=0 
 
 [1636479870807] Consumer Consumer-7 waiting before while, with tail 27, head 22 ------ holdCount=0 
-[1636479870808] Consumer Consumer-7 BEFORE lock! with tail 27, head 22 ------ holdCount=0 
-[1636479870809] Consumer Consumer-7 has LOCKED! with tail 27, head 22 ------ holdCount=1 
+
+[1636479870808] Consumer Consumer-7 BEFORE lock!
+
+with tail 27, head 22 ------ holdCount=0 
+
+[1636479870809] Consumer Consumer-7 has LOCKED!
+
+with tail 27, head 22 ------ holdCount=1 
+
 [1636479870809] Consumer Consumer-7 EXTRACTED item 2 with tail 27, head 23 ------ holdCount=1 
-[1636479870810] Consumer Consumer-7 ABOUT to unlock! with tail 27, head 23 ------ holdCount=1 
-[1636479870811] Consumer Consumer-7 has UNLOCKED! with tail 27, head 23 ------ holdCount=0 
+
+[1636479870810] Consumer Consumer-7 ABOUT to unlock!
+
+with tail 27, head 23 ------ holdCount=1 
+
+[1636479870811] Consumer Consumer-7 has UNLOCKED!
+
+with tail 27, head 23 ------ holdCount=0 
 
 [1636479870811] Consumer Consumer-7 waiting before while, with tail 27, head 23 ------ holdCount=0 
-[1636479870812] Consumer Consumer-7 BEFORE lock! with tail 27, head 23 ------ holdCount=0 
-[1636479870813] Consumer Consumer-7 has LOCKED! with tail 27, head 23 ------ holdCount=1 
-[1636479870813] Consumer Consumer-7 EXTRACTED item 3 with tail 27, head 24 ------ holdCount=1 
-[1636479870814] Consumer Consumer-7 ABOUT to unlock! with tail 27, head 24 ------ holdCount=1 
-[1636479870815] Consumer Consumer-7 has UNLOCKED! with tail 27, head 24 ------ holdCount=0 
 
-Thread Consumer-7 finished... 
+[1636479870812] Consumer Consumer-7 BEFORE lock!
+
+with tail 27, head 23 ------ holdCount=0 
+
+[1636479870813] Consumer Consumer-7 has LOCKED!
+
+with tail 27, head 23 ------ holdCount=1 
+
+[1636479870813] Consumer Consumer-7 EXTRACTED item 3 with tail 27, head 24 ------ holdCount=1 
+
+[1636479870814] Consumer Consumer-7 ABOUT to unlock!
+
+with tail 27, head 24 ------ holdCount=1 
+
+[1636479870815] Consumer Consumer-7 has UNLOCKED!
+
+with tail 27, head 24 ------ holdCount=0 
+
+Thread Consumer-7 finished.
+
+.
+
+.
+
 [1636479870817] Producer Producer-8 is has LOCKED -> tail 27, head 24, try to push x=1 ------ holdCount=1 
+
 [1636479870817] Producer Producer-8 has ENQUEUED VALUE -> tail 28, head 24, try to push x=1 ------ holdCount=1 
+
 [1636479870818] Producer Producer-8 is ABOUT to unlock -> tail 28, head 24, try to push x=1 ------ holdCount=1 
+
 [1636479870819] Producer Producer-8 has UNLOCKED -> tail 28, head 24, try to push x=1 ------ holdCount=0 
-Thread Producer-8 ended  : Enqueue(1) of queue: [1, 2, 3, 1]
+
+Thread Producer-8 ended : Enqueue(1) of queue: [1, 2, 3, 1]
 
 Thread Producer-8 started: Enqueue(2) of queue: [1, 2, 3, 1]
+
 [1636479870820] Producer Producer-8 waiting before while, with tail 28, head 24, try to push x=2 
+
 [1636479870821] Producer Producer-8 ABOUT to locks -> tail 28, head 24, try to push x=2 ------ holdCount=0 
+
 [1636479870822] Producer Producer-8 is has LOCKED -> tail 28, head 24, try to push x=2 ------ holdCount=1 
+
 [1636479870822] Producer Producer-8 has ENQUEUED VALUE -> tail 29, head 24, try to push x=2 ------ holdCount=1 
+
 [1636479870823] Producer Producer-8 is ABOUT to unlock -> tail 29, head 24, try to push x=2 ------ holdCount=1 
+
 [1636479870824] Producer Producer-8 has UNLOCKED -> tail 29, head 24, try to push x=2 ------ holdCount=0 
-Thread Producer-8 ended  : Enqueue(2) of queue: [1, 2, 3, 1, 2]
+
+Thread Producer-8 ended : Enqueue(2) of queue: [1, 2, 3, 1, 2]
 
 Thread Producer-8 started: Enqueue(3) of queue: [1, 2, 3, 1, 2]
-[1636479870826] Producer Producer-8 waiting before while, with tail 29, head 24, try to push x=3 
-[1636479870827] Producer Producer-8 ABOUT to locks -> tail 29, head 24, try to push x=3 ------ holdCount=0 
-[1636479870828] Producer Producer-8 is has LOCKED -> tail 29, head 24, try to push x=3 ------ holdCount=1 
-[1636479870828] Producer Producer-8 has ENQUEUED VALUE -> tail 30, head 24, try to push x=3 ------ holdCount=1 
-[1636479870829] Producer Producer-8 is ABOUT to unlock -> tail 30, head 24, try to push x=3 ------ holdCount=1 
-[1636479870854] Producer Producer-8 has UNLOCKED -> tail 30, head 24, try to push x=3 ------ holdCount=0 
-Thread Producer-8 ended  : Enqueue(3) of queue: [1, 2, 3, 1, 2, 3]
 
-Thread Producer-8 finished... 
-[1636479870865] Consumer Consumer-1 has LOCKED! with tail 30, head 24 ------ holdCount=1 
+[1636479870826] Producer Producer-8 waiting before while, with tail 29, head 24, try to push x=3 
+
+[1636479870827] Producer Producer-8 ABOUT to locks -> tail 29, head 24, try to push x=3 ------ holdCount=0 
+
+[1636479870828] Producer Producer-8 is has LOCKED -> tail 29, head 24, try to push x=3 ------ holdCount=1 
+
+[1636479870828] Producer Producer-8 has ENQUEUED VALUE -> tail 30, head 24, try to push x=3 ------ holdCount=1 
+
+[1636479870829] Producer Producer-8 is ABOUT to unlock -> tail 30, head 24, try to push x=3 ------ holdCount=1 
+
+[1636479870854] Producer Producer-8 has UNLOCKED -> tail 30, head 24, try to push x=3 ------ holdCount=0 
+
+Thread Producer-8 ended : Enqueue(3) of queue: [1, 2, 3, 1, 2, 3]
+
+Thread Producer-8 finished.
+
+.
+
+.
+
+[1636479870865] Consumer Consumer-1 has LOCKED!
+
+with tail 30, head 24 ------ holdCount=1 
+
 [1636479870866] Consumer Consumer-1 EXTRACTED item 1 with tail 30, head 25 ------ holdCount=1 
-[1636479870867] Consumer Consumer-1 ABOUT to unlock! with tail 30, head 25 ------ holdCount=1 
-[1636479870868] Consumer Consumer-1 has UNLOCKED! with tail 30, head 25 ------ holdCount=0 
+
+[1636479870867] Consumer Consumer-1 ABOUT to unlock!
+
+with tail 30, head 25 ------ holdCount=1 
+
+[1636479870868] Consumer Consumer-1 has UNLOCKED!
+
+with tail 30, head 25 ------ holdCount=0 
 
 [1636479870868] Consumer Consumer-1 waiting before while, with tail 30, head 25 ------ holdCount=0 
-[1636479870868] Consumer Consumer-1 BEFORE lock! with tail 30, head 25 ------ holdCount=0 
-[1636479870868] Consumer Consumer-1 has LOCKED! with tail 30, head 25 ------ holdCount=1 
+
+[1636479870868] Consumer Consumer-1 BEFORE lock!
+
+with tail 30, head 25 ------ holdCount=0 
+
+[1636479870868] Consumer Consumer-1 has LOCKED!
+
+with tail 30, head 25 ------ holdCount=1 
+
 [1636479870868] Consumer Consumer-1 EXTRACTED item 2 with tail 30, head 26 ------ holdCount=1 
-[1636479870868] Consumer Consumer-1 ABOUT to unlock! with tail 30, head 26 ------ holdCount=1 
-[1636479870869] Consumer Consumer-1 has UNLOCKED! with tail 30, head 26 ------ holdCount=0 
+
+[1636479870868] Consumer Consumer-1 ABOUT to unlock!
+
+with tail 30, head 26 ------ holdCount=1 
+
+[1636479870869] Consumer Consumer-1 has UNLOCKED!
+
+with tail 30, head 26 ------ holdCount=0 
 
 [1636479870869] Consumer Consumer-1 waiting before while, with tail 30, head 26 ------ holdCount=0 
-[1636479870869] Consumer Consumer-1 BEFORE lock! with tail 30, head 26 ------ holdCount=0 
-[1636479870869] Consumer Consumer-1 has LOCKED! with tail 30, head 26 ------ holdCount=1 
-[1636479870869] Consumer Consumer-1 EXTRACTED item 3 with tail 30, head 27 ------ holdCount=1 
-[1636479870869] Consumer Consumer-1 ABOUT to unlock! with tail 30, head 27 ------ holdCount=1 
-[1636479870869] Consumer Consumer-1 has UNLOCKED! with tail 30, head 27 ------ holdCount=0 
 
-Thread Consumer-1 finished... 
-[1636479870870] Consumer Consumer-6 has LOCKED! with tail 30, head 27 ------ holdCount=1 
+[1636479870869] Consumer Consumer-1 BEFORE lock!
+
+with tail 30, head 26 ------ holdCount=0 
+
+[1636479870869] Consumer Consumer-1 has LOCKED!
+
+with tail 30, head 26 ------ holdCount=1 
+
+[1636479870869] Consumer Consumer-1 EXTRACTED item 3 with tail 30, head 27 ------ holdCount=1 
+
+[1636479870869] Consumer Consumer-1 ABOUT to unlock!
+
+with tail 30, head 27 ------ holdCount=1 
+
+[1636479870869] Consumer Consumer-1 has UNLOCKED!
+
+with tail 30, head 27 ------ holdCount=0 
+
+Thread Consumer-1 finished.
+
+.
+
+.
+
+[1636479870870] Consumer Consumer-6 has LOCKED!
+
+with tail 30, head 27 ------ holdCount=1 
+
 [1636479870870] Consumer Consumer-6 EXTRACTED item 1 with tail 30, head 28 ------ holdCount=1 
-[1636479870870] Consumer Consumer-6 ABOUT to unlock! with tail 30, head 28 ------ holdCount=1 
-[1636479870870] Consumer Consumer-6 has UNLOCKED! with tail 30, head 28 ------ holdCount=0 
+
+[1636479870870] Consumer Consumer-6 ABOUT to unlock!
+
+with tail 30, head 28 ------ holdCount=1 
+
+[1636479870870] Consumer Consumer-6 has UNLOCKED!
+
+with tail 30, head 28 ------ holdCount=0 
 
 [1636479870871] Consumer Consumer-6 waiting before while, with tail 30, head 28 ------ holdCount=0 
-[1636479870871] Consumer Consumer-6 BEFORE lock! with tail 30, head 28 ------ holdCount=0 
-[1636479870871] Consumer Consumer-6 has LOCKED! with tail 30, head 28 ------ holdCount=1 
+
+[1636479870871] Consumer Consumer-6 BEFORE lock!
+
+with tail 30, head 28 ------ holdCount=0 
+
+[1636479870871] Consumer Consumer-6 has LOCKED!
+
+with tail 30, head 28 ------ holdCount=1 
+
 [1636479870871] Consumer Consumer-6 EXTRACTED item 2 with tail 30, head 29 ------ holdCount=1 
-[1636479870871] Consumer Consumer-6 ABOUT to unlock! with tail 30, head 29 ------ holdCount=1 
-[1636479870871] Consumer Consumer-6 has UNLOCKED! with tail 30, head 29 ------ holdCount=0 
 
-Thread Consumer-6 finished... 
-[1636479870872] Consumer Consumer-3 has LOCKED! with tail 30, head 29 ------ holdCount=1 
+[1636479870871] Consumer Consumer-6 ABOUT to unlock!
+
+with tail 30, head 29 ------ holdCount=1 
+
+[1636479870871] Consumer Consumer-6 has UNLOCKED!
+
+with tail 30, head 29 ------ holdCount=0 
+
+Thread Consumer-6 finished.
+
+.
+
+.
+
+[1636479870872] Consumer Consumer-3 has LOCKED!
+
+with tail 30, head 29 ------ holdCount=1 
+
 [1636479870872] Consumer Consumer-3 EXTRACTED item 3 with tail 30, head 30 ------ holdCount=1 
-[1636479870872] Consumer Consumer-3 ABOUT to unlock! with tail 30, head 30 ------ holdCount=1 
-[1636479870872] Consumer Consumer-3 has UNLOCKED! with tail 30, head 30 ------ holdCount=0 
 
-Thread Consumer-3 finished... 
+[1636479870872] Consumer Consumer-3 ABOUT to unlock!
+
+with tail 30, head 30 ------ holdCount=1 
+
+[1636479870872] Consumer Consumer-3 has UNLOCKED!
+
+with tail 30, head 30 ------ holdCount=0 
+
+Thread Consumer-3 finished.
+
+.
+
+.
 
 Process finished with exit code 0
+
+
 
   </details>
 
