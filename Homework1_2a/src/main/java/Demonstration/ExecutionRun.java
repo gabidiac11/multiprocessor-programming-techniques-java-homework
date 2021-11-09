@@ -13,7 +13,7 @@ import java.util.Vector;
 public class ExecutionRun {
 
     public ExecutionRun() {
-//        consumersGetSuckBecauseOfCaching();
+//        consumersGetStuckBecauseOfCaching();
         otherTest();
     }
 
@@ -57,7 +57,7 @@ public class ExecutionRun {
      *
      * This gets solved by using "volatile"
      */
-    public void consumersGetSuckBecauseOfCaching() {
+    public void consumersGetStuckBecauseOfCaching() {
         int queueSize = 20;
         LockBasedQueue queue = new LockBasedQueue(queueSize);
 
