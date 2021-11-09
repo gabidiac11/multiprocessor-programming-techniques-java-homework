@@ -133,13 +133,12 @@ finally {
 
 ```
 
-Daca metoda lock se afla in interiorul blocului **try**, in momentul cand aceasta arunca vreo exceptie, exceptia este prinsa si se
+Daca metoda lock se afla in interiorul blocului **try**, si exista vroe problema, in momentul cand aceasta arunca vreo exceptie, exceptia este prinsa si se
 ajunge cu executia in bloc-ul **finally** unde se incearca apelarea metodei unlock. 
 
-Metoda unlock va incerca sa deblocheze un lock neblocat (*lock-ul a esuat si a aruncat o exceptie*), moment in care va esua 
-si va arunca o exceptie pentru toate tipurile de lock mai putin, ReentrantLock.
+Metoda unlock va incerca sa deblocheze un lock nedetinut (*lock-ul a esuat si a aruncat o exceptie*), moment in care va esua 
+si va arunca exceptia **IllegalMonitorStateException**, motiv pentru care prima varianta de cod este preferata.
 
-Astfel, prima varianta este cea preferata.
 
 ### Exercitiu 3
 [![N|Solid](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)](https://github.com/gabidiac11/multiprocessor-programming-techniques-java-homework/blob/main/Homework1_ex3/uml.png)
