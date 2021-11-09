@@ -52,9 +52,9 @@ de startul producatorilor, astfel incat consumatorii sa fie in bucla cand primul
 
 - Producatorii sunt singurii care mai functioneaza si executia lor se incheie in mod normal, terminandu-si
 de inserat tot ce aveau de inserat (presupunand ca nu vor incerca sa insereze mai mult decat capacitatea cozii).
-- Consumatorii raman blocati in bucla `while` din cauza cache-uirii variabilelor `tail` si `head`.
+- Consumatorii raman blocati in bucla `while` din cauza cache-uirii variabilelor `tail` si `head`.  
 
-
+---
 <details>
     <summary>
     Output-ul problemei de caching
@@ -427,6 +427,8 @@ Thread  Producer2 ended  : Enqueue(10) of queue: [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 
 
 Thread  Producer2 finished...
 </details>
+
+---
 
 Problema cache-uirii se poate rezolva prin folosirea keyword-ului `volatile` pentru `tail` si `head` sau prin
 utilizarea variabilelor in interiorul buclei.  
