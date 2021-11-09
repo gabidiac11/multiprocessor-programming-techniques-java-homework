@@ -441,16 +441,18 @@ while(tail - head == QSIZE) {
 
 Odata cu rezolvarea problemei de caching, algoritmul generalizat functioneaza.
 Se presupune ca head si tail sunt declarate ca volatile.
-Folosirea al aceluiasi lacat pentru sectiuni diferite inseamna 2 sectiuni critice blocate simulant si mutual exclusive privitor la ambele tipuri de thread-uri (consumator, producator). Astfel cand un producator blocheaza sectiunea critica din `enq`, consumtorii nu vor putea intra in sectiunea critica din `deq`.
+Folosirea al aceluiasi lacat pentru sectiuni diferite inseamna 2 sectiuni critice blocate si mutual exclusive privitor la ambele tipuri de thread-uri (consumator, producator). Astfel cand un producator blocheaza sectiunea critica din `enq`, consumtorii nu vor putea intra in sectiunea critica din `deq`.
 
-Acest lucru asigura in acelasi ca algoritmul sa functioneze fara conflicte intre consumatori, si nici conflicte intre producatori. Algoritmul initial pentru un singur consumator si un singur 1 producator nu putea suporta mai multe thread-uri din cauza problemelor generate de executarea concurenta a secvectele de cod:
-    1. `enq()` (Exemple de probleme: OutOfBoundExeption, un producator poate suprascrie operatia altui producator)
+Acest lucru asigura in acelasi timp ca algoritmul va functiona fara conflicte intre consumatori, si fara conflicte intre producatori. Algoritmul initial pentru un singur consumator si un singur 1 producator nu putea suporta mai multe thread-uri din cauza problemelor generate de executarea concurenta a secvectele de cod:
+
+  1. `enq()` (Exemple de probleme: OutOfBoundExeption, un producator poate suprascrie operatia altui producator)
+    
     ````java
     		items [ tail % QSIZE ] = x; 
     		tail ++;
     ````
     
-    2. `deq()`
+  2. `deq()`
     ```java
     int item = items [ head % QSIZE ]; 
     head ++;
@@ -458,7 +460,7 @@ Acest lucru asigura in acelasi ca algoritmul sa functioneze fara conflicte intre
     
   Prin adaugarea lacatului pe aceste sectiuni se rezolva problemele de mai sus si algoritmul va functiona.
   Observati: 
-  1.	lacatul intodeauna va avea count-ul 1, pentru ca e, per apel de metoda (end sau deq), lacatul este blocat o singura data de thread-ul care primeste primul lock, dupa care deblocat o singura data (consumatorul apeleaza doar deq(), iar producatorul doar enq())
+  1.	lacatul intodeauna va avea count-ul 1, pentru ca, per apel de metoda (end sau deq), lacatul este blocat o singura data de thread-ul care primeste primul lock, dupa care deblocat o singura data (consumatorul apeleaza doar deq(), iar producatorul doar enq())
   2.	algoritmul nu este fair
   
   <details>
